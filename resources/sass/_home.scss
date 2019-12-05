@@ -95,10 +95,14 @@
 
 @media screen and (max-width: $tablet) {
     #home-banner-img-responsive {
-        height: 25vh !important;
+        height: 45vh !important;
     }
 
     #home-banner-text-responsive {
-        top: 5vh !important;
+        top: 10vh !important;
+    }
+
+    .home-box {
+        padding: 2rem 4rem !important;
     }
 }

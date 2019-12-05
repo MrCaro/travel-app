@@ -3,7 +3,7 @@
 @section ('content')
     {{--  Banner Hero --}}
     <div class="home-banner text-center">
-        <img id="home-banner-img-responsive" src="{{url('/images/travel-bg.png')}}" alt="" style="width: 100%; height: 100vh;">
+        <img id="home-banner-img-responsive" src="{{url('/images/travel-bg.png')}}" alt="" style="width: 100vw; height: 100vh;">
         <div id="home-banner-text-responsive" style="">
             <h1 class="text-uppercase font-size-90">
                 welcome

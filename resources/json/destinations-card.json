@@ -1,0 +1,30 @@
+[
+    {
+        "image": "images/nyc-thumbnail.png",
+        "title" : "new york",
+        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean",
+        "review": 3,
+        "price": 800
+    },
+    {
+        "image": "images/nyc-thumbnail.png",
+        "title" : "new york 2",
+        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean",
+        "review": 3,
+        "price":  800
+    },
+     {
+        "image": "images/nyc-thumbnail.png",
+        "title" : "new york 3",
+        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean",
+        "review": 3,
+        "price": 800
+    },
+    {
+        "image": "images/nyc-thumbnail.png",
+        "title" : "new york 4",
+        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean",
+        "review": 3,
+        "price":  800
+    }
+]

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 class PagesViewController extends Controller
 {
     public function home() {
-        return view('welcome');
+        return view('pages.home');
     }
 
     public function destination() {

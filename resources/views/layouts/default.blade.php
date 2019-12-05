@@ -4,18 +4,19 @@
     @include('includes.head')
 </head>
 <body>
-    <div class="container">
+    <div class="">
         <header class="row">
             @include('includes.header')
         </header>
         <main>
             <div id="main" class="row">
-                @yield('content')
+                    @yield('content')
             </div>
         </main>
         <footer class="row">
             @include('includes.footer')
         </footer>
     </div>
+    <script src="js/app.js"></script>
 </body>
 </html>

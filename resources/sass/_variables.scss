@@ -1,0 +1,17 @@
+//fonts
+$titling-font: titling-gothic-fb,sans-serif !important;
+$bold: 700 !important;
+$regular: 400 !important;
+$thin: 100 !important;
+$font-size-18: calc(13px + (18 - 13) * ((100vw - 576px) / (1140 - 576)));
+$font-size-90: calc(70px + (90 - 70) * ((100vw - 576px) / (1140 - 576)));
+$font-size-110: calc(70px + (110 - 70) * ((100vw - 576px) / (1140 - 576)));
+
+//colors
+$gray: #898989;
+$light-black: #262626;
+
+//media breakpoints
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;

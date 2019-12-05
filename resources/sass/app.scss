@@ -1,4 +1,23 @@
-//
-.test {
-    color: red !important;
+@import "variables";
+@import "home";
+
+body {
+    font-family: $titling-font;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-weight: $bold;
+    font-style: normal;
+    color: white;
+}
+
+footer {
+    background-color: gray;
+    padding: 2rem;
+    color: white;
+    font-size: 12px;
+    font-weight: $bold;
+    margin-top: 4rem;
 }

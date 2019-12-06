@@ -1868,6 +1868,8 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__P
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -19579,9 +19581,16 @@ var render = function() {
                 "a",
                 {
                   staticClass: "btn btn-primary text-uppercase",
-                  attrs: { id: "destinations-details-cta", href: "#" }
+                  attrs: {
+                    id: "destinations-details-cta",
+                    href: "/view?destination=" + destination.url
+                  }
                 },
-                [_vm._v("destinations details")]
+                [
+                  _vm._v(
+                    "\n                        destinations details\n                    "
+                  )
+                ]
               )
             ])
           ])
@@ -31863,7 +31872,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"review\":4,\"price\":\"800\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...\",\"review\":4,\"price\":\"1,200\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall have included border controls, allowing the imposition of duties...\",\"review\":3,\"price\":\"1,640\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy...\",\"review\":5,\"price\":\"2,000\"}]");
+module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"review\":4,\"price\":\"800\",\"url\":\"new-york\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...\",\"review\":4,\"price\":\"1,200\",\"url\":\"bora-bora\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall have included border controls, allowing the imposition of duties...\",\"review\":3,\"price\":\"1,640\",\"url\":\"great-wall\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy...\",\"review\":5,\"price\":\"2,000\",\"url\":\"paris\"}]");
 
 /***/ }),
 

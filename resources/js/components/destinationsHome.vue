@@ -19,7 +19,9 @@
                                 <p class="card-price" style="padding-top: 0.3rem">starting from ${{destination.price}}</p>
                             </div>
                         </div>
-                        <a id="destinations-details-cta" href="#" class="btn btn-primary text-uppercase">destinations details</a>
+                        <a id="destinations-details-cta" :href="`/view?destination=${destination.url}`" class="btn btn-primary text-uppercase">
+                            destinations details
+                        </a>
                     </div>
                 </div>
             </div>

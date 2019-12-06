@@ -73,13 +73,19 @@
 .card-title {
   color: #898989 !important;
   font-size: 15px !important;
-  font-weight: 700 !important !important;
+  font-weight: 700 !important;
 }
 
 .card-text {
   color: #262626 !important;
   font-size: 12px !important;
   font-weight: 100 !important;
+}
+
+.card-price {
+  color: #898989 !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
 }
 
 #destinations-details-cta {
@@ -103,7 +109,7 @@
   }
 
   #home-banner-text-responsive {
-    top: 10vh !important;
+    top: 15vh !important;
   }
 
   .home-box {

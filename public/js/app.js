@@ -1857,6 +1857,17 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__P
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -19510,12 +19521,59 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean"
-                )
+                _vm._v(_vm._s(destination.description))
               ]),
               _vm._v(" "),
               _c("hr"),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "row mb-4" },
+                [
+                  _vm._l(5, function(i) {
+                    return _c(
+                      "div",
+                      {
+                        staticClass: "col-md-1 col-sm-1 col-xs-1",
+                        staticStyle: {
+                          width: "auto !important",
+                          "padding-right": "0 !important"
+                        }
+                      },
+                      [
+                        i <= destination.review
+                          ? _c("img", {
+                              attrs: { src: "/images/golden-star.png", alt: "" }
+                            })
+                          : i > destination.review
+                          ? _c("img", {
+                              attrs: { src: "/images/empty-star.png", alt: "" }
+                            })
+                          : _vm._e()
+                      ]
+                    )
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "text-right col-md-7 col-sm-7 col-xs-7",
+                      staticStyle: { width: "auto" }
+                    },
+                    [
+                      _c(
+                        "p",
+                        {
+                          staticClass: "card-price",
+                          staticStyle: { "padding-top": "0.3rem" }
+                        },
+                        [_vm._v("starting from $" + _vm._s(destination.price))]
+                      )
+                    ]
+                  )
+                ],
+                2
+              ),
               _vm._v(" "),
               _c(
                 "a",
@@ -31805,7 +31863,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"new york\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean\",\"review\":3,\"price\":800},{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"new york 2\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean\",\"review\":3,\"price\":800},{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"new york 3\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean\",\"review\":3,\"price\":800},{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"new york 4\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean\",\"review\":3,\"price\":800}]");
+module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"review\":4,\"price\":\"800\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...\",\"review\":4,\"price\":\"1,200\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall have included border controls, allowing the imposition of duties...\",\"review\":3,\"price\":\"1,640\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy...\",\"review\":5,\"price\":\"2,000\"}]");
 
 /***/ }),
 

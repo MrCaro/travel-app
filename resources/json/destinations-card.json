@@ -1,30 +1,30 @@
 [
     {
         "image": "images/nyc-thumbnail.png",
-        "title" : "new york",
-        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean",
-        "review": 3,
-        "price": 800
+        "title" : "New York, USA",
+        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
+        "review": 4,
+        "price": "800"
     },
     {
-        "image": "images/nyc-thumbnail.png",
-        "title" : "new york 2",
-        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean",
-        "review": 3,
-        "price":  800
+        "image": "images/bora-bora-thumbnail.png",
+        "title" : "Bora Bora, Tahiti",
+        "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...",
+        "review": 4,
+        "price":  "1,200"
     },
      {
-        "image": "images/nyc-thumbnail.png",
-        "title" : "new york 3",
-        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean",
+        "image": "images/great-wall-thumbnail.png",
+        "title" : "Great Wall, China",
+        "description": "The Great Wall have included border controls, allowing the imposition of duties...",
         "review": 3,
-        "price": 800
+        "price": "1,640"
     },
     {
-        "image": "images/nyc-thumbnail.png",
-        "title" : "new york 4",
-        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean",
-        "review": 3,
-        "price":  800
+        "image": "images/paris-thumbnail.png",
+        "title" : "Paris, France",
+        "description": "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy...",
+        "review": 5,
+        "price":  "2,000"
     }
 ]

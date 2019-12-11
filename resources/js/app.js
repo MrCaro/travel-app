@@ -10,6 +10,7 @@ Vue.component('destinations-thumbnails', require('./components/destinationsHome.
 Vue.component('destinations-info', require('./components/destinationsView.vue').default);
 
 const router = new VueRouter( {
+    //with history you remove '#'
     mode: "history",
     routes: [
         {

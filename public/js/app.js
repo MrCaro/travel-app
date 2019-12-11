@@ -1878,8 +1878,7 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__P
     };
   },
   mounted: function mounted() {
-    console.log('Destination List Compiled!');
-    console.log(this.$route.path);
+    console.log('Home Page loaded successfully!');
   }
 });
 
@@ -1912,23 +1911,41 @@ var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: {
-    query: {
-      type: String,
-      "default": ''
-    }
-  },
   data: function data() {
     return {
       destinationsInfo: _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__,
-      test: this.$route.query.destination
+      displayCityInfo: this.$route.query.destination
     };
   },
   mounted: function mounted() {
-    console.log('Destination Info Compiled!');
-    console.log(this.test);
+    console.log(this.displayCityInfo + ' Page loaded successfully!');
   }
 });
 
@@ -19679,30 +19696,87 @@ var render = function() {
       { staticClass: "row" },
       _vm._l(_vm.destinationsInfo, function(destination) {
         return _c("div", { staticClass: "col-md-12 mb-5" }, [
-          destination.city === _vm.test
-            ? _c("div", { staticClass: "col-md-12 text-center mb-5" }, [
-                _c(
-                  "h2",
-                  {
-                    staticClass: "text-uppercase mt-4 mb-4",
-                    attrs: { id: "explore-heading" }
-                  },
-                  [
+          destination.city === _vm.displayCityInfo
+            ? _c("div", [
+                _c("div", { staticClass: "col-md-12 text-center mb-5" }, [
+                  _c(
+                    "h2",
+                    {
+                      staticClass: "text-uppercase mt-4 mb-5",
+                      attrs: { id: "explore-heading" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        " +
+                          _vm._s(destination.title) +
+                          "\n                    "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "destination-description" }, [
                     _vm._v(
-                      "\n                    " +
-                        _vm._s(destination.title) +
-                        "\n                "
+                      "\n                        " +
+                        _vm._s(destination.description) +
+                        "\n                    "
                     )
-                  ]
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "row mt-5" },
+                  [
+                    _vm._m(0, true),
+                    _vm._v(" "),
+                    _vm._l(destination.itinerary, function(days) {
+                      return _c(
+                        "div",
+                        { staticClass: "col-md-4 text-left mb-5" },
+                        [
+                          _c(
+                            "h3",
+                            {
+                              staticClass:
+                                "destinations-details-gray-headings mt-4 mb-4"
+                            },
+                            [
+                              _vm._v(
+                                "\n                            " +
+                                  _vm._s(days.date) +
+                                  "\n                        "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "destination-description" }, [
+                            _vm._v(
+                              "\n                            " +
+                                _vm._s(days.activity) +
+                                "\n                        "
+                            )
+                          ])
+                        ]
+                      )
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-md-8 text-left mb-5" }, [
+                      _c("img", {
+                        attrs: {
+                          src: destination.map,
+                          alt: "map of " + _vm.displayCityInfo
+                        }
+                      })
+                    ])
+                  ],
+                  2
                 ),
                 _vm._v(" "),
-                _c("p", { staticClass: "destination-description" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(destination.description) +
-                      "\n                "
-                  )
-                ])
+                _c("hr", {
+                  staticStyle: {
+                    "border-top": "1px solid #7070707a !important"
+                  }
+                })
               ])
             : _vm._e()
         ])
@@ -19711,7 +19785,24 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-12 text-center" }, [
+      _c(
+        "h3",
+        { staticClass: "destinations-details-gray-headings mt-4 mb-4" },
+        [
+          _vm._v(
+            "\n                            itinerary November\n                        "
+          )
+        ]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -34770,6 +34861,7 @@ Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 Vue.component('destinations-thumbnails', __webpack_require__(/*! ./components/destinationsHome.vue */ "./resources/js/components/destinationsHome.vue")["default"]);
 Vue.component('destinations-info', __webpack_require__(/*! ./components/destinationsView.vue */ "./resources/js/components/destinationsView.vue")["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
+  //with history you remove '#'
   mode: "history",
   routes: [{
     path: '/',
@@ -34982,7 +35074,7 @@ module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":
 /*! exports provided: 0, 1, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"city\":\"new-york\",\"title\":\"ny 2020\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":\"Sat 10\",\"day-2\":\"Sun 11\"},\"map\":\"images/nyc-thumbnail.png\"},{\"city\":\"test\",\"title\":\"images/nyc-thumbnail.png\",\"description\":\"New York, USA\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":\"Sat 10\",\"day-2\":\"Sun 11\"},\"map\":\"images/nyc-thumbnail.png\"}]");
+module.exports = JSON.parse("[{\"city\":\"new-york\",\"title\":\"ny 2020\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":{\"date\":\"Sat 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-2\":{\"date\":\"Sun 11\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-3\":{\"date\":\"Mon 12\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-4\":{\"date\":\"Tues 13\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}},\"map\":\"images/nyc-map.png\"},{\"city\":\"bora-bora\",\"title\":\"images/nyc-thumbnail.png\",\"description\":\"New York, USA\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":\"Sat 10\",\"day-2\":\"Sun 11\"},\"map\":\"images/nyc-thumbnail.png\"}]");
 
 /***/ }),
 

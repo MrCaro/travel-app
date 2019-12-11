@@ -32,7 +32,6 @@
     import json from '../../json/destinations-card.json';
 
     export default {
-
         data() {
             return{
                 destinationsThumbnail: json,
@@ -40,9 +39,7 @@
         },
 
         mounted() {
-            console.log('Destination List Compiled!');
-            console.log(this.$route.path);
+            console.log('Home Page loaded successfully!');
         },
-
     }
 </script>

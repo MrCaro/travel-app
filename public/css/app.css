@@ -243,6 +243,12 @@
   font-weight: 100 !important;
 }
 
+.destinations-details-gray-headings {
+  color: #898989;
+  font-size: calc(30px + (35 - 30) * ((100vw - 576px) / (1140 - 576)));
+  font-weight: 700 !important;
+}
+
 body {
   font-family: titling-gothic-fb, sans-serif !important;
   max-width: 100%;

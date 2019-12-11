@@ -5,13 +5,27 @@
         "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
         "subtitle": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
         "itinerary": {
-            "day-1": "Sat 10",
-            "day-2": "Sun 11"
+            "day-1": {
+                "date": "Sat 10",
+                "activity": "Go and visit some awesome museum at central park and go to Bridge"
+            },
+            "day-2": {
+                "date": "Sun 11",
+                "activity": "Go and visit some awesome museum at central park and go to Bridge"
+            },
+            "day-3": {
+                "date": "Mon 12",
+                "activity": "Go and visit some awesome museum at central park and go to Bridge"
+            },
+            "day-4": {
+                "date": "Tues 13",
+                "activity": "Go and visit some awesome museum at central park and go to Bridge"
+            }
         },
-        "map": "images/nyc-thumbnail.png"
+        "map": "images/nyc-map.png"
     },
     {
-        "city": "test",
+        "city": "bora-bora",
         "title": "images/nyc-thumbnail.png",
         "description": "New York, USA",
         "subtitle": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",

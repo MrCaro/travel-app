@@ -9,14 +9,14 @@
         {{-- title --}}
         <div id="destinations-banner-text-responsive" style="">
             <h1 class="text-uppercase font-size-70">
-                new york<br>usa
+                bora bora<br>tahiti
             </h1>
             <hr class="destinations-banner-title-separator">
         </div>
         {{-- price --}}
         <div id="destination-banner-price-responsive">
             <p class="destinations-price-banner">
-                starting from $800
+                starting from $1200
             </p>
         </div>
         {{-- promo --}}
@@ -27,7 +27,7 @@
         </div>
         <div id="destination-banner-promo-responsive">
             <p class="destinations-promo-banner font-size-70">
-                NY20
+                BB20
             </p>
         </div>
         {{-- tag line --}}

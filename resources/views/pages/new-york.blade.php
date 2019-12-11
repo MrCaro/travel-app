@@ -4,7 +4,7 @@
     {{--  Banner Hero --}}
     <div class="home-banner text-center">
         <img id="home-banner-img-responsive" src="{{url('/images/nyc-banner-bg.png')}}" alt="" style="width: 100vw; height: 100vh;">
-        <div id="destinations-banner-blur-responsive">
+        <div id="destinations-banner-blur-responsive-nyc">
         </div>
         {{-- title --}}
         <div id="destinations-banner-text-responsive" style="">
@@ -43,16 +43,9 @@
     {{--  Content  --}}
     <div class="container" id="app">
         <div class="row">
-            <div class="col-md-10 text-left mb-5">
-                <h2 id="explore-heading" class="text-lowercase">explore</h2>
-            </div>
+            {{--  new york info --}}
+            <destinations-info></destinations-info>
             {{-- List of destinations --}}
-            <example></example>
-            <div class="col-md-2 text-center d-none d-md-block" style="position: relative;">
-                <div id="home-2020">
-                    <p>2</p><br><p>0</p><br><p>2</p><br><p>0</p>
-                </div>
-            </div>
         </div>
     </div>
 @stop

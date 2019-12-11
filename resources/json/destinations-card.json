@@ -5,7 +5,7 @@
         "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
         "review": 4,
         "price": "800",
-        "url": "new-york"
+        "code": "new-york"
     },
     {
         "image": "images/bora-bora-thumbnail.png",
@@ -13,7 +13,7 @@
         "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...",
         "review": 4,
         "price":  "1,200",
-        "url": "bora-bora"
+        "code": "bora-bora"
     },
      {
         "image": "images/great-wall-thumbnail.png",
@@ -21,7 +21,7 @@
         "description": "The Great Wall have included border controls, allowing the imposition of duties...",
         "review": 3,
         "price": "1,640",
-         "url": "great-wall"
+         "code": "great-wall"
     },
     {
         "image": "images/paris-thumbnail.png",
@@ -29,6 +29,6 @@
         "description": "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy...",
         "review": 5,
         "price":  "2,000",
-        "url": "paris"
+        "code": "paris"
     }
 ]

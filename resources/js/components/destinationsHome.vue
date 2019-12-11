@@ -19,7 +19,7 @@
                                 <p class="card-price" style="padding-top: 0.3rem">starting from ${{destination.price}}</p>
                             </div>
                         </div>
-                        <a id="destinations-details-cta" :href="`/view?destination=${destination.url}`" class="btn btn-primary text-uppercase">
+                        <a id="destinations-details-cta" @click="selected(destination.code)" :value="destination.code" :href="`/view?destination=${destination.code}`" class="btn btn-primary text-uppercase">
                             destinations details
                         </a>
                     </div>
@@ -29,17 +29,19 @@
     </div>
 </template>
 <script>
-    import json from '../../json/destinations-card.json'
+    import json from '../../json/destinations-card.json';
 
     export default {
+
         data() {
             return{
-                destinationsThumbnail: json
+                destinationsThumbnail: json,
             }
         },
 
         mounted() {
-            console.log('Destination List Compiled!')
+            console.log('Destination List Compiled!');
+            console.log(this.$route.path);
         }
     }
 </script>

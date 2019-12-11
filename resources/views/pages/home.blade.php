@@ -23,7 +23,7 @@
                 <h2 id="explore-heading" class="text-lowercase">explore</h2>
             </div>
             {{-- List of destinations --}}
-            <example></example>
+            <destinations-thumbnails></destinations-thumbnails>
             <div class="col-md-2 text-center d-none d-md-block" style="position: relative;">
                 <div id="home-2020">
                     <p>2</p><br><p>0</p><br><p>2</p><br><p>0</p>

@@ -137,7 +137,7 @@
   }
 }
 
-#destinations-banner-blur-responsive {
+#destinations-banner-blur-responsive-nyc {
   position: absolute;
   color: white;
   top: 30vh;
@@ -146,10 +146,25 @@
   height: 40%;
   -webkit-filter: blur(3px);
           filter: blur(3px);
-  background-image: url("/images/nyc-banner-bg.png");
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: cover;
+  background-image: url("/images/nyc-banner-bg.png");
+}
+
+#destinations-banner-blur-responsive-bora-bora {
+  position: absolute;
+  color: white;
+  top: 30vh;
+  width: 80%;
+  left: 10%;
+  height: 40%;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-image: url("/images/bora-bora-banner-bg.png");
 }
 
 #destinations-banner-text-responsive {
@@ -167,8 +182,8 @@
 #destinations-banner-text-responsive .destinations-banner-title-separator {
   width: 40%;
   border-top: 1px solid #707070;
-  left: 0;
-  top: 42%;
+  left: -5%;
+  top: 41%;
   position: absolute;
 }
 
@@ -220,6 +235,11 @@
 #destination-banner-tagline-responsive .destinations-tagline-banner {
   text-align: right;
   margin-bottom: 1rem;
+  font-weight: 100 !important;
+}
+
+.destination-description {
+  font-size: 25px;
   font-weight: 100 !important;
 }
 

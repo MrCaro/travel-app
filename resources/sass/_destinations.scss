@@ -1,6 +1,6 @@
 @import "variables";
 
-#destinations-banner-blur-responsive {
+@mixin destination-banner-blur {
     position: absolute;
     color: white;
     top: 30vh;
@@ -8,10 +8,19 @@
     left: 10%;
     height: 40%;
     filter: blur(3px);
-    background-image: url('/images/nyc-banner-bg.png');
     background-attachment: fixed;
     background-position: 50% 50%;
     background-size: cover;
+}
+
+#destinations-banner-blur-responsive-nyc {
+    @include destination-banner-blur;
+    background-image: url('/images/nyc-banner-bg.png');
+}
+
+#destinations-banner-blur-responsive-bora-bora {
+    @include destination-banner-blur;
+    background-image: url('/images/bora-bora-banner-bg.png');
 }
 
 #destinations-banner-text-responsive {
@@ -29,8 +38,8 @@
     .destinations-banner-title-separator {
         width: 40%;
         border-top: 1px solid #707070;
-        left: 0;
-        top: 42%;
+        left: -5%;
+        top: 41%;
         position: absolute;
     }
 
@@ -87,4 +96,9 @@
         margin-bottom: 1rem;
         font-weight: $thin;
     }
+}
+
+.destination-description {
+    font-size: 25px;
+    font-weight: $thin;
 }

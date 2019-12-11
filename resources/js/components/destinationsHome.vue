@@ -19,7 +19,7 @@
                                 <p class="card-price" style="padding-top: 0.3rem">starting from ${{destination.price}}</p>
                             </div>
                         </div>
-                        <a id="destinations-details-cta" @click="selected(destination.code)" :value="destination.code" :href="`/view?destination=${destination.code}`" class="btn btn-primary text-uppercase">
+                        <a id="destinations-details-cta" :value="destination.code" :href="`/view?destination=${destination.code}`" class="btn btn-primary text-uppercase">
                             destinations details
                         </a>
                     </div>
@@ -42,6 +42,7 @@
         mounted() {
             console.log('Destination List Compiled!');
             console.log(this.$route.path);
-        }
+        },
+
     }
 </script>

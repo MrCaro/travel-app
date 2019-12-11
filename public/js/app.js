@@ -1879,7 +1879,6 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__P
   },
   mounted: function mounted() {
     console.log('Destination List Compiled!');
-    console.log(this.$route.query.test);
     console.log(this.$route.path);
   }
 });
@@ -1916,19 +1915,20 @@ var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
-    location: {
+    query: {
       type: String,
       "default": ''
     }
   },
   data: function data() {
     return {
-      destinationsInfo: _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__
+      destinationsInfo: _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__,
+      test: this.$route.query.destination
     };
   },
   mounted: function mounted() {
     console.log('Destination Info Compiled!');
-    console.log(this.$route.params.destination);
+    console.log(this.test);
   }
 });
 
@@ -19635,11 +19635,6 @@ var render = function() {
                     id: "destinations-details-cta",
                     value: destination.code,
                     href: "/view?destination=" + destination.code
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.selected(destination.code)
-                    }
                   }
                 },
                 [
@@ -19684,7 +19679,7 @@ var render = function() {
       { staticClass: "row" },
       _vm._l(_vm.destinationsInfo, function(destination) {
         return _c("div", { staticClass: "col-md-12 mb-5" }, [
-          destination.city === _vm.location
+          destination.city === _vm.test
             ? _c("div", { staticClass: "col-md-12 text-center mb-5" }, [
                 _c(
                   "h2",
@@ -34775,14 +34770,21 @@ Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 Vue.component('destinations-thumbnails', __webpack_require__(/*! ./components/destinationsHome.vue */ "./resources/js/components/destinationsHome.vue")["default"]);
 Vue.component('destinations-info', __webpack_require__(/*! ./components/destinationsView.vue */ "./resources/js/components/destinationsView.vue")["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
-  routes: [// {
-  //     path:'/',
-  //     component: destinationsView.vue,
-  //     props: (route) => ({ location: route.query.destination })
-  // },
-  {
+  mode: "history",
+  routes: [{
+    path: '/',
+    component: _components_destinationsView__WEBPACK_IMPORTED_MODULE_0__["default"].vue,
+    props: {
+      "default": true
+    }
+  }, {
     path: '/view',
-    component: _components_destinationsView__WEBPACK_IMPORTED_MODULE_0__["default"].vue
+    component: _components_destinationsView__WEBPACK_IMPORTED_MODULE_0__["default"].vue,
+    props: function props(route) {
+      return {
+        query: route.query.destination
+      };
+    }
   }]
 });
 var app = new Vue({

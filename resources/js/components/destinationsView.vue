@@ -29,7 +29,7 @@
                             </p>
                         </div>
                         <div class="col-md-8 text-left mb-5">
-                            <img class="d-none d-sm-block" :src="destination.map" :alt="`map of ${displayCityInfo}`">
+                            <img class="d-none d-sm-block" :src="destination.map" :alt="`map of ${displayCityInfo}`" style="width: 100%; object-fit: cover">
                         </div>
                     </div>
                     <hr style="border-top: 1px solid #7070707a !important;">

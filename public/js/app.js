@@ -19769,6 +19769,7 @@ var render = function() {
                     _c("div", { staticClass: "col-md-8 text-left mb-5" }, [
                       _c("img", {
                         staticClass: "d-none d-sm-block",
+                        staticStyle: { width: "100%", "object-fit": "cover" },
                         attrs: {
                           src: destination.map,
                           alt: "map of " + _vm.displayCityInfo

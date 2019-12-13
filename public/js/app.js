@@ -19695,9 +19695,9 @@ var render = function() {
       "div",
       { staticClass: "row" },
       _vm._l(_vm.destinationsInfo, function(destination) {
-        return _c("div", { staticClass: "col-md-12 mb-5" }, [
-          destination.city === _vm.displayCityInfo
-            ? _c("div", [
+        return destination.city === _vm.displayCityInfo
+          ? _c("div", { staticClass: "col-md-12 mb-5" }, [
+              _c("div", [
                 _c("div", { staticClass: "col-md-12 text-center mb-5" }, [
                   _c(
                     "h2",
@@ -19785,8 +19785,8 @@ var render = function() {
                   }
                 })
               ])
-            : _vm._e()
-        ])
+            ])
+          : _vm._e()
       }),
       0
     )

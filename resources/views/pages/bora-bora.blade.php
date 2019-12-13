@@ -6,6 +6,7 @@
         <img id="home-banner-img-responsive" src="{{url('/images/bora-bora-banner-bg.png')}}" alt="" style="width: 100vw; height: 100vh;">
         <div id="destinations-banner-blur-responsive-bora-bora" class="d-none d-sm-block">
         </div>
+        {{-- desktop --}}
         {{-- title --}}
         <div id="destinations-banner-text-responsive" style="">
             <h1 class="text-uppercase font-size-70 d-none d-sm-block">

@@ -1,8 +1,8 @@
 <template>
     <div class="col-md-12">
         <div class="row">
-            <div v-for="destination in destinationsInfo"  class="col-md-12 mb-5">
-                <div v-if="destination.city === displayCityInfo">
+            <div v-for="destination in destinationsInfo" v-if="destination.city === displayCityInfo" class="col-md-12 mb-5">
+                <div>
                     <!-- destination title and description -->
                     <div class="col-md-12 text-center mb-5">
                         <h2 id="explore-heading" class="text-uppercase mt-4 mb-5">

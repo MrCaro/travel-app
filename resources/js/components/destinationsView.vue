@@ -13,7 +13,7 @@
                         </p>
                     </div>
                     <!-- destination itinerary -->
-                    <div class="row mt-5">
+                    <div class="row mt-5 container" style="margin: auto">
                         <div class="col-md-12 text-center">
                             <h3 class="destinations-details-gray-headings mt-4 mb-4">
                                 itinerary November

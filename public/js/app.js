@@ -19725,7 +19725,10 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "row mt-5" },
+                  {
+                    staticClass: "row mt-5 container",
+                    staticStyle: { margin: "auto" }
+                  },
                   [
                     _vm._m(0, true),
                     _vm._v(" "),

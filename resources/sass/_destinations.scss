@@ -23,6 +23,12 @@
     background-image: url('/images/bora-bora-banner-bg.png');
 }
 
+.heading-view {
+    color: $gray;
+    font-size: $font-size-110;
+    font-weight: $bold;
+}
+
 #destinations-banner-text-responsive {
     position: absolute;
     width: 80%;

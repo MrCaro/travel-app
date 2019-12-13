@@ -1895,6 +1895,41 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__P
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../json/destinations-details.json */ "./resources/json/destinations-details.json");
 var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../json/destinations-details.json */ "./resources/json/destinations-details.json", 1);
+/* harmony import */ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json");
+var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -1937,10 +1972,12 @@ var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       destinationsInfo: _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__,
+      destinationsCards: _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1__,
       displayCityInfo: this.$route.query.destination
     };
   },
@@ -19701,10 +19738,7 @@ var render = function() {
                 _c("div", { staticClass: "col-md-12 text-center mb-5" }, [
                   _c(
                     "h2",
-                    {
-                      staticClass: "text-uppercase mt-4 mb-5",
-                      attrs: { id: "explore-heading" }
-                    },
+                    { staticClass: "heading-view text-uppercase mt-4 mb-5" },
                     [
                       _vm._v(
                         "\n                        " +
@@ -19784,7 +19818,136 @@ var render = function() {
                   staticStyle: {
                     "border-top": "1px solid #7070707a !important"
                   }
-                })
+                }),
+                _vm._v(" "),
+                _vm._m(1, true),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-12 text-left" }, [
+                  _c(
+                    "div",
+                    { staticClass: "row" },
+                    _vm._l(_vm.destinationsCards, function(showCard) {
+                      return showCard.code !== _vm.displayCityInfo
+                        ? _c("div", { staticClass: "col-md-4 mb-5" }, [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "card",
+                                staticStyle: { width: "18rem" }
+                              },
+                              [
+                                _c("img", {
+                                  staticClass: "card-img-top",
+                                  attrs: {
+                                    src: showCard.image,
+                                    alt: "Card image cap"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "card-body" }, [
+                                  _c("h5", { staticClass: "card-title pb-2" }, [
+                                    _vm._v(_vm._s(showCard.title))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("p", { staticClass: "card-text" }, [
+                                    _vm._v(_vm._s(showCard.description))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("hr"),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "row mb-4" },
+                                    [
+                                      _vm._l(5, function(i) {
+                                        return _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "col-md-1 col-sm-1 col-xs-1",
+                                            staticStyle: {
+                                              width: "auto !important",
+                                              "padding-right": "0 !important"
+                                            }
+                                          },
+                                          [
+                                            i <= showCard.review
+                                              ? _c("img", {
+                                                  attrs: {
+                                                    src:
+                                                      "/images/golden-star.png",
+                                                    alt: ""
+                                                  }
+                                                })
+                                              : i > showCard.review
+                                              ? _c("img", {
+                                                  attrs: {
+                                                    src:
+                                                      "/images/empty-star.png",
+                                                    alt: ""
+                                                  }
+                                                })
+                                              : _vm._e()
+                                          ]
+                                        )
+                                      }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "text-right col-md-7 col-sm-7 col-xs-7",
+                                          staticStyle: { width: "auto" }
+                                        },
+                                        [
+                                          _c(
+                                            "p",
+                                            {
+                                              staticClass: "card-price",
+                                              staticStyle: {
+                                                "padding-top": "0.3rem"
+                                              }
+                                            },
+                                            [
+                                              _vm._v(
+                                                "starting from $" +
+                                                  _vm._s(showCard.price)
+                                              )
+                                            ]
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    2
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      staticClass:
+                                        "btn btn-primary text-uppercase",
+                                      attrs: {
+                                        id: "destinations-details-cta",
+                                        value: showCard.code,
+                                        href:
+                                          "/view?destination=" + showCard.code
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        destinations details\n                                    "
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]
+                            )
+                          ])
+                        : _vm._e()
+                    }),
+                    0
+                  )
+                ])
               ])
             ])
           : _vm._e()
@@ -19808,6 +19971,16 @@ var staticRenderFns = [
           )
         ]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-12 text-left mb-5" }, [
+      _c("h2", { staticClass: "heading-view mt-4 mb-5" }, [
+        _vm._v("\n                        explore\n                    ")
+      ])
     ])
   }
 ]
@@ -35071,7 +35244,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"review\":4,\"price\":\"800\",\"code\":\"new-york\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...\",\"review\":4,\"price\":\"1,200\",\"code\":\"bora-bora\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall have included border controls, allowing the imposition of duties...\",\"review\":3,\"price\":\"1,640\",\"code\":\"great-wall\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy...\",\"review\":5,\"price\":\"2,000\",\"code\":\"paris\"}]");
+module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic...\",\"review\":4,\"price\":\"800\",\"code\":\"new-york\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...\",\"review\":4,\"price\":\"1,200\",\"code\":\"bora-bora\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall have included border controls, allowing the imposition of duties...\",\"review\":3,\"price\":\"1,640\",\"code\":\"great-wall\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion...\",\"review\":5,\"price\":\"2,000\",\"code\":\"paris\"}]");
 
 /***/ }),
 

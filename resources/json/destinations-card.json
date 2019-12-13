@@ -2,7 +2,7 @@
     {
         "image": "images/nyc-thumbnail.png",
         "title" : "New York, USA",
-        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
+        "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic...",
         "review": 4,
         "price": "800",
         "code": "new-york"
@@ -26,7 +26,7 @@
     {
         "image": "images/paris-thumbnail.png",
         "title" : "Paris, France",
-        "description": "Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy...",
+        "description": "Paris, France's capital, is a major European city and a global center for art, fashion...",
         "review": 5,
         "price":  "2,000",
         "code": "paris"

@@ -108,3 +108,9 @@
     font-size: $font-size-35;
     font-weight: $bold;
 }
+
+@media screen and (max-width: $mobile) {
+    #itinerary:nth-child(odd) {
+        text-align: right !important;
+    }
+}

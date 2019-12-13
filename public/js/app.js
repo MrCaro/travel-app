@@ -19732,7 +19732,10 @@ var render = function() {
                     _vm._l(destination.itinerary, function(days) {
                       return _c(
                         "div",
-                        { staticClass: "col-md-4 text-left mb-5" },
+                        {
+                          staticClass: "col-md-4 text-left mb-5",
+                          attrs: { id: "itinerary" }
+                        },
                         [
                           _c(
                             "h3",
@@ -19762,6 +19765,7 @@ var render = function() {
                     _vm._v(" "),
                     _c("div", { staticClass: "col-md-8 text-left mb-5" }, [
                       _c("img", {
+                        staticClass: "d-none d-sm-block",
                         attrs: {
                           src: destination.map,
                           alt: "map of " + _vm.displayCityInfo

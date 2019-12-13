@@ -249,6 +249,12 @@
   font-weight: 700 !important;
 }
 
+@media screen and (max-width: 576px) {
+  #itinerary:nth-child(odd) {
+    text-align: right !important;
+  }
+}
+
 body {
   font-family: titling-gothic-fb, sans-serif !important;
   max-width: 100%;

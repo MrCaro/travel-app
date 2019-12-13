@@ -20,7 +20,7 @@
                             </h3>
                         </div>
                         <!-- days and activities loop -->
-                        <div v-for="days in destination.itinerary" class="col-md-4 text-left mb-5">
+                        <div id="itinerary" v-for="days in destination.itinerary" class="col-md-4 text-left mb-5">
                             <h3 class="destinations-details-gray-headings mt-4 mb-4">
                                 {{days.date}}
                             </h3>
@@ -29,7 +29,7 @@
                             </p>
                         </div>
                         <div class="col-md-8 text-left mb-5">
-                            <img :src="destination.map" :alt="`map of ${displayCityInfo}`">
+                            <img class="d-none d-sm-block" :src="destination.map" :alt="`map of ${displayCityInfo}`">
                         </div>
                     </div>
                     <hr style="border-top: 1px solid #7070707a !important;">

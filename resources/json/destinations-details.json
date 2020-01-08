@@ -6,19 +6,19 @@
         "subtitle": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
         "itinerary": {
             "day-1": {
-                "date": "Sat 10",
-                "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                "date": "Sat 7",
+                "activity": "Visit World Trade Center, Financial District, NY Stock..."
             },
             "day-2": {
-                "date": "Sun 11",
-                "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                "date": "Sun 8",
+                "activity": "We will make our way to the Statue of Liberty. Designed by..."
             },
             "day-3": {
-                "date": "Mon 12",
+                "date": "Mon 9",
                 "activity": "Go and visit some awesome museum at central park and go to Bridge"
             },
             "day-4": {
-                "date": "Tues 13",
+                "date": "Tues 10",
                 "activity": "Go and visit some awesome museum at central park and go to Bridge"
             }
         },

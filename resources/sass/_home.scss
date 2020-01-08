@@ -43,6 +43,23 @@
         font-weight: $bold;
         font-size: $font-size-18;
     }
+
+    .book-now {
+        color: $gray;
+        margin: 0;
+        font-weight: $thin;
+        font-size: $font-size-18;
+    }
+
+    button {
+        position: absolute;
+        width: 12%;
+        top: 30%;
+        right: -6%;
+        background: linear-gradient(45deg, #01692D, #00FF62);
+        border: none;
+        border-radius: 0;
+    }
 }
 
 #explore-heading {
@@ -112,6 +129,18 @@
 @media screen and (max-width: $mobile) {
     #explore-heading {
         text-align: center;
+    }
+
+    .home-box {
+        button {
+            position: absolute;
+            top: auto;
+            bottom: -10%;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: auto;
+        }
     }
 }
 

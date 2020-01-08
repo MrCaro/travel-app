@@ -1971,6 +1971,10 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1983,8 +1987,121 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
   },
   mounted: function mounted() {
     console.log(this.displayCityInfo + ' Page loaded successfully!');
-  }
-});
+    this.initMap();
+  },
+  methods: {
+    initMap: function initMap() {
+      var mapCityUrl = this.displayCityInfo;
+      var longitud;
+      var latitud;
+      var customZoom;
+      var iconDay1;
+      var longitudDay1;
+      var latitudDay1;
+      var iconDay2;
+      var longitudDay2;
+      var latitudDay2;
+
+      switch (mapCityUrl) {
+        case 'new-york':
+          longitud = -73.935242;
+          latitud = 40.730610;
+          customZoom = 10;
+          iconDay1 = 'town-hall';
+          longitudDay1 = -74.0145492;
+          latitudDay1 = 40.7115242;
+          iconDay2 = 'castle';
+          longitudDay2 = -74.0466891;
+          latitudDay2 = 40.6892494;
+          break;
+
+        case 'bora-bora':
+          longitud = -151.7377588;
+          latitud = -16.4957495;
+          customZoom = 12;
+          iconDay1 = 'theatre';
+          break;
+      }
+
+      mapboxgl.accessToken = 'pk.eyJ1IjoiY2FybG9zY2FybzE5OTQiLCJhIjoiY2s0NGx6a3hsMDA0MDNlcnRsMnZkdnZ5OSJ9.LZ7CukT8uDmuqFKqzEko4g';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [longitud, latitud],
+        zoom: customZoom
+      });
+      map.on('load', function () {
+        // Add a layer showing the places.
+        map.addLayer({
+          'id': 'places',
+          'type': 'symbol',
+          'source': {
+            'type': 'geojson',
+            'data': {
+              'type': 'FeatureCollection',
+              'features': [{
+                'type': 'Feature',
+                'properties': {
+                  'description': '<strong>Saturday 10</strong>' + '<p>' + 'Visit World Trade Center, Financial District, NY Stock ' + 'Exchange, JP Morgan Building, The first Capitol, Trump Tower, Charging Bull' + '</p>',
+                  'icon': iconDay1,
+                  'title': 'SAT 10'
+                },
+                'geometry': {
+                  'type': 'Point',
+                  'coordinates': [longitudDay1, latitudDay1]
+                }
+              }, {
+                'type': 'Feature',
+                'properties': {
+                  'description': '<strong>Sunday 11</strong>' + '<p> We will make our way to the Statue of Liberty. Designed by Frédéric Auguste ' + 'Bartholdi, this iconic copper statue was built by Gustave Eiffel and was ' + 'dedicated on October 28, 1886. ' + '</p>',
+                  'icon': iconDay2,
+                  'title': 'SUN 11'
+                },
+                'geometry': {
+                  'type': 'Point',
+                  'coordinates': [longitudDay2, latitudDay2]
+                }
+              }]
+            }
+          },
+          'layout': {
+            'icon-image': '{icon}-15',
+            'icon-allow-overlap': true,
+            'text-field': ['get', 'title'],
+            'text-offset': [0, 0.9]
+          }
+        }); // Create a popup, but don't add it to the map yet.
+
+        var popup = new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false
+        });
+        map.on('mouseenter', 'places', function (e) {
+          // Change the cursor style as a UI indicator.
+          map.getCanvas().style.cursor = 'pointer';
+          var coordinates = e.features[0].geometry.coordinates.slice();
+          var description = e.features[0].properties.description; // Ensure that if the map is zoomed out such that multiple
+          // copies of the feature are visible, the popup appears
+          // over the copy being pointed to.
+
+          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+          } // Populate the popup and set its coordinates
+          // based on the feature found.
+
+
+          popup.setLngLat(coordinates).setHTML(description).addTo(map);
+        });
+        map.on('mouseleave', 'places', function () {
+          map.getCanvas().style.cursor = '';
+          popup.remove();
+        });
+      });
+    } //end initmap
+
+  } //end method
+
+}); //end default
 
 /***/ }),
 
@@ -19741,18 +19858,18 @@ var render = function() {
                     { staticClass: "heading-view text-uppercase mt-4 mb-5" },
                     [
                       _vm._v(
-                        "\n                        " +
+                        "\n                            " +
                           _vm._s(destination.title) +
-                          "\n                    "
+                          "\n                        "
                       )
                     ]
                   ),
                   _vm._v(" "),
                   _c("p", { staticClass: "destination-description" }, [
                     _vm._v(
-                      "\n                        " +
+                      "\n                            " +
                         _vm._s(destination.description) +
-                        "\n                    "
+                        "\n                        "
                     )
                   ])
                 ]),
@@ -19782,34 +19899,25 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                            " +
+                                "\n                                " +
                                   _vm._s(days.date) +
-                                  "\n                        "
+                                  "\n                            "
                               )
                             ]
                           ),
                           _vm._v(" "),
                           _c("p", { staticClass: "destination-description" }, [
                             _vm._v(
-                              "\n                            " +
+                              "\n                                " +
                                 _vm._s(days.activity) +
-                                "\n                        "
+                                "\n                            "
                             )
                           ])
                         ]
                       )
                     }),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-8 text-left mb-5" }, [
-                      _c("img", {
-                        staticClass: "d-none d-sm-block",
-                        staticStyle: { width: "100%", "object-fit": "cover" },
-                        attrs: {
-                          src: destination.map,
-                          alt: "map of " + _vm.displayCityInfo
-                        }
-                      })
-                    ])
+                    _vm._m(1, true)
                   ],
                   2
                 ),
@@ -19820,7 +19928,7 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _vm._m(1, true),
+                _vm._m(2, true),
                 _vm._v(" "),
                 _c("div", { staticClass: "col-md-12 text-left" }, [
                   _c(
@@ -19935,7 +20043,7 @@ var render = function() {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                                        destinations details\n                                    "
+                                        "\n                                            destinations details\n                                        "
                                       )
                                     ]
                                   )
@@ -19967,7 +20075,7 @@ var staticRenderFns = [
         { staticClass: "destinations-details-gray-headings mt-4 mb-4" },
         [
           _vm._v(
-            "\n                            itinerary November\n                        "
+            "\n                                itinerary November\n                            "
           )
         ]
       )
@@ -19977,9 +20085,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-8 text-left mb-5" }, [
+      _c("div", {
+        staticStyle: { width: "100%", height: "100%" },
+        attrs: { id: "map" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-12 text-left mb-5" }, [
       _c("h2", { staticClass: "heading-view mt-4 mb-5" }, [
-        _vm._v("\n                        explore\n                    ")
+        _vm._v(
+          "\n                            explore\n                        "
+        )
       ])
     ])
   }
@@ -35255,7 +35376,7 @@ module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":
 /*! exports provided: 0, 1, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"city\":\"new-york\",\"title\":\"ny 2020\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":{\"date\":\"Sat 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-2\":{\"date\":\"Sun 11\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-3\":{\"date\":\"Mon 12\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-4\":{\"date\":\"Tues 13\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}},\"map\":\"images/nyc-map.png\"},{\"city\":\"bora-bora\",\"title\":\"bb 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":{\"date\":\"Sat 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-2\":{\"date\":\"Sun 11\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-3\":{\"date\":\"Mon 12\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-4\":{\"date\":\"Tues 13\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}},\"map\":\"images/nyc-map.png\"}]");
+module.exports = JSON.parse("[{\"city\":\"new-york\",\"title\":\"ny 2020\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},\"day-2\":{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},\"day-3\":{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-4\":{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}},\"map\":\"images/nyc-map.png\"},{\"city\":\"bora-bora\",\"title\":\"bb 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":{\"date\":\"Sat 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-2\":{\"date\":\"Sun 11\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-3\":{\"date\":\"Mon 12\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-4\":{\"date\":\"Tues 13\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}},\"map\":\"images/nyc-map.png\"}]");
 
 /***/ }),
 

@@ -46,6 +46,23 @@
   font-size: calc(13px + (18 - 13) * ((100vw - 576px) / (1140 - 576)));
 }
 
+.home-box .book-now {
+  color: #898989;
+  margin: 0;
+  font-weight: 100 !important;
+  font-size: calc(13px + (18 - 13) * ((100vw - 576px) / (1140 - 576)));
+}
+
+.home-box button {
+  position: absolute;
+  width: 12%;
+  top: 30%;
+  right: -6%;
+  background: linear-gradient(45deg, #01692D, #00FF62);
+  border: none;
+  border-radius: 0;
+}
+
 #explore-heading {
   color: #898989;
   font-size: calc(70px + (110 - 70) * ((100vw - 576px) / (1140 - 576)));
@@ -120,6 +137,16 @@
 @media screen and (max-width: 576px) {
   #explore-heading {
     text-align: center;
+  }
+
+  .home-box button {
+    position: absolute;
+    top: auto;
+    bottom: -10%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: auto;
   }
 }
 
@@ -262,6 +289,15 @@
 
   hr {
     width: 80vw !important;
+  }
+
+  .heading-view {
+    text-align: center !important;
+  }
+
+  .form-control {
+    height: calc(1em + .3rem + 2px) !important;
+    font-size: 0.7rem !important;
   }
 }
 

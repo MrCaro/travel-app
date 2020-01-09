@@ -1,52 +1,152 @@
 [
     {
         "city": "new-york",
+        "from": "New York, USA",
+        "dates": "Sat 7 to Tues 10",
         "title": "ny 2020",
         "description": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
         "subtitle": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
-        "itinerary": {
-            "day-1": {
-                "date": "Sat 7",
-                "activity": "Visit World Trade Center, Financial District, NY Stock..."
+        "itineraries": [
+            {
+                "label": "Sat 7 to Tues 10",
+                "itinerary": [
+                    {
+                        "date": "Sat 7",
+                        "activity": "Visit World Trade Center, Financial District, NY Stock..."
+                    },
+                    {
+                        "date": "Sun 8",
+                        "activity": "We will make our way to the Statue of Liberty. Designed by..."
+                    },
+                    {
+                        "date": "Mon 9",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    },
+                    {
+                        "date": "Tues 10",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    }
+                ]
             },
-            "day-2": {
-                "date": "Sun 8",
-                "activity": "We will make our way to the Statue of Liberty. Designed by..."
-            },
-            "day-3": {
-                "date": "Mon 9",
-                "activity": "Go and visit some awesome museum at central park and go to Bridge"
-            },
-            "day-4": {
-                "date": "Tues 10",
-                "activity": "Go and visit some awesome museum at central park and go to Bridge"
+            {
+                "label": "Sat 12 to Tues 20",
+                "itinerary": [
+                    {
+                        "date": "Sat 12",
+                        "activity": "Visit World Trade Center, Financial District, NY Stock..."
+                    },
+                    {
+                        "date": "Sun 8",
+                        "activity": "We will make our way to the Statue of Liberty. Designed by..."
+                    },
+                    {
+                        "date": "Mon 9",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    },
+                    {
+                        "date": "Tues 20",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    }
+                ]
             }
-        },
+        ],
+
         "map": "images/nyc-map.png"
     },
     {
         "city": "bora-bora",
+        "from": "Bora Bora, Tahiti",
+        "dates": "Sat 7 to Tues 10",
         "title": "bb 2020",
         "description": "Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
         "subtitle": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
-        "itinerary": {
-            "day-1": {
-                "date": "Sat 10",
-                "activity": "Go and visit some awesome museum at central park and go to Bridge"
-            },
-            "day-2": {
-                "date": "Sun 11",
-                "activity": "Go and visit some awesome museum at central park and go to Bridge"
-            },
-            "day-3": {
-                "date": "Mon 12",
-                "activity": "Go and visit some awesome museum at central park and go to Bridge"
-            },
-            "day-4": {
-                "date": "Tues 13",
-                "activity": "Go and visit some awesome museum at central park and go to Bridge"
+        "itineraries": [
+            {
+                "label": "Sat 7 to Tues 10",
+                "itinerary": [
+                    {
+                        "date": "Sat 7",
+                        "activity": "Visit World Trade Center, Financial District, NY Stock..."
+                    },
+                    {
+                        "date": "Sun 8",
+                        "activity": "We will make our way to the Statue of Liberty. Designed by..."
+                    },
+                    {
+                        "date": "Mon 9",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    },
+                    {
+                        "date": "Tues 10",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    }
+                ]
             }
-        },
+        ],
+        "map": "images/nyc-map.png"
+    },
+    {
+        "city": "great-wall",
+        "from": "Great Wall, China",
+        "dates": "Sat 7 to Tues 10",
+        "title": "ch 2020",
+        "description": "Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
+        "subtitle": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
+        "itineraries": [
+            {
+                "label": "Sat 7 to Tues 10",
+                "itinerary": [
+                    {
+                        "date": "Sat 7",
+                        "activity": "Visit World Trade Center, Financial District, NY Stock..."
+                    },
+                    {
+                        "date": "Sun 8",
+                        "activity": "We will make our way to the Statue of Liberty. Designed by..."
+                    },
+                    {
+                        "date": "Mon 9",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    },
+                    {
+                        "date": "Tues 10",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    }
+                ]
+            }
+        ],
+        "map": "images/nyc-map.png"
+    },
+    {
+        "city": "paris",
+        "from": "Paris, France",
+        "dates": "Sat 7 to Tues 10",
+        "title": "pa 2020",
+        "description": "Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.",
+        "subtitle": "New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...",
+        "itineraries": [
+            {
+                "label": "Sat 7 to Tues 10",
+                "itinerary": [
+                    {
+                        "date": "Sat 7",
+                        "activity": "Visit World Trade Center, Financial District, NY Stock..."
+                    },
+                    {
+                        "date": "Sun 8",
+                        "activity": "We will make our way to the Statue of Liberty. Designed by..."
+                    },
+                    {
+                        "date": "Mon 9",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    },
+                    {
+                        "date": "Tues 10",
+                        "activity": "Go and visit some awesome museum at central park and go to Bridge"
+                    }
+                ]
+            }
+        ],
         "map": "images/nyc-map.png"
     }
 ]

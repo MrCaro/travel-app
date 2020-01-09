@@ -37,9 +37,6 @@
                 Explore the city that never sleeps
             </p>
         </div>
-        <div class="home-box">
-            <p class="gray-home-sub-heading text-uppercase text-left">our destinations for 2020</p>
-        </div>
         {{-- mobile --}}
         <div id="" class="text-center d-block d-sm-none" style="position: absolute; top: 15vh; width: 100%;">
             <h1 class="text-uppercase font-size-70">
@@ -48,11 +45,7 @@
         </div>
     </div>
     {{--  Content  --}}
-    <div class="container" id="app">
-        <div class="row">
-            {{--  bora bora info --}}
-            <destinations-info></destinations-info>
-            {{-- List of destinations --}}
-        </div>
+    <div id="app">
+        <destinations-info></destinations-info>
     </div>
 @stop

@@ -8,6 +8,8 @@ Vue.use(VueRouter);
 
 Vue.component('destinations-thumbnails', require('./components/destinationsHome.vue').default);
 Vue.component('destinations-info', require('./components/destinationsView.vue').default);
+Vue.component('destinations-cards', require('./components/destinationCards.vue').default);
+Vue.component('destination-itinerary', require('./components/destinationItinerary.vue').default);
 
 const router = new VueRouter( {
     //with history you remove '#'

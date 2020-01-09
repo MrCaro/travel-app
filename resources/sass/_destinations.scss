@@ -23,6 +23,16 @@
     background-image: url('/images/bora-bora-banner-bg.png');
 }
 
+#destinations-banner-blur-responsive-great-wall {
+    @include destination-banner-blur;
+    background-image: url('/images/great-wall-banner-bg.png');
+}
+
+#destinations-banner-blur-responsive-paris {
+    @include destination-banner-blur;
+    background-image: url('/images/paris-banner-bg.png');
+}
+
 .heading-view {
     color: $gray;
     font-size: $font-size-110;

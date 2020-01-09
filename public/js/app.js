@@ -1829,17 +1829,15 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationsHome.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationCards.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationsHome.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationCards.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json");
-var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json", 1);
 //
 //
 //
@@ -1865,38 +1863,22 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__P
 //
 //
 //
-//
-//
-//
-//
-//
-
 /* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      destinationsThumbnail: _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0__
-    };
-  },
-  mounted: function mounted() {
-    console.log('Home Page loaded successfully!');
-  }
+  name: "destinationCards.vue",
+  props: ['showCard']
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationsView.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationsView.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationItinerary.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationItinerary.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../json/destinations-details.json */ "./resources/json/destinations-details.json");
-var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../json/destinations-details.json */ "./resources/json/destinations-details.json", 1);
-/* harmony import */ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json");
-var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json", 1);
 //
 //
 //
@@ -1939,55 +1921,25 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
 /* harmony default export */ __webpack_exports__["default"] = ({
+  name: "destinationItinerary",
+  props: ['destination', 'selected'],
   data: function data() {
     return {
-      destinationsInfo: _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__,
-      destinationsCards: _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1__,
       displayCityInfo: this.$route.query.destination
     };
   },
   mounted: function mounted() {
-    console.log(this.displayCityInfo + ' Page loaded successfully!');
-    this.initMap();
+    console.log("Date range selected: " + this.selected);
+  },
+  watch: {
+    selected: function selected(val) {
+      console.log("Date range selected: " + this.selected);
+      var vm = this;
+      setTimeout(function () {
+        vm.initMap();
+      }, 1000);
+    }
   },
   methods: {
     initMap: function initMap() {
@@ -2006,7 +1958,7 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
         case 'new-york':
           longitud = -73.935242;
           latitud = 40.730610;
-          customZoom = 10;
+          customZoom = 9.5;
           iconDay1 = 'town-hall';
           longitudDay1 = -74.0145492;
           latitudDay1 = 40.7115242;
@@ -2100,6 +2052,119 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
     } //end initmap
 
   } //end method
+
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationsHome.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationsHome.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json");
+var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      destinationsThumbnail: _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_0__
+    };
+  },
+  mounted: function mounted() {
+    console.log('Home Page loaded successfully!');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationsView.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationsView.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../json/destinations-details.json */ "./resources/json/destinations-details.json");
+var _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../json/destinations-details.json */ "./resources/json/destinations-details.json", 1);
+/* harmony import */ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json");
+var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../json/destinations-card.json */ "./resources/json/destinations-card.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      destinationsInfo: _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__,
+      destinationsCards: _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1__,
+      displayCityInfo: this.$route.query.destination,
+      selected: ""
+    };
+  },
+  mounted: function mounted() {
+    console.log('Page loaded successfully! ' + this.displayCityInfo);
+  },
+  methods: {} //end method
 
 }); //end default
 
@@ -19711,6 +19776,241 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationCards.vue?vue&type=template&id=dd873080&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationCards.vue?vue&type=template&id=dd873080& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
+    _c("img", {
+      staticClass: "card-img-top",
+      attrs: { src: _vm.showCard.image, alt: "Card image cap" }
+    }),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-body" }, [
+      _c("h5", { staticClass: "card-title pb-2" }, [
+        _vm._v(_vm._s(_vm.showCard.title))
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "card-text" }, [
+        _vm._v(_vm._s(_vm.showCard.description))
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "row mb-4" },
+        [
+          _vm._l(5, function(i) {
+            return _c(
+              "div",
+              {
+                staticClass: "col-md-1 col-sm-1 col-xs-1",
+                staticStyle: {
+                  width: "auto !important",
+                  "padding-right": "0 !important"
+                }
+              },
+              [
+                i <= _vm.showCard.review
+                  ? _c("img", {
+                      attrs: { src: "/images/golden-star.png", alt: "" }
+                    })
+                  : i > _vm.showCard.review
+                  ? _c("img", {
+                      attrs: { src: "/images/empty-star.png", alt: "" }
+                    })
+                  : _vm._e()
+              ]
+            )
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "text-right col-md-7 col-sm-7 col-xs-7",
+              staticStyle: { width: "auto" }
+            },
+            [
+              _c(
+                "p",
+                {
+                  staticClass: "card-price",
+                  staticStyle: { "padding-top": "0.3rem" }
+                },
+                [_vm._v("starting from $" + _vm._s(_vm.showCard.price))]
+              )
+            ]
+          )
+        ],
+        2
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "btn btn-primary text-uppercase",
+          attrs: {
+            id: "destinations-details-cta",
+            value: _vm.showCard.code,
+            href: "/view?destination=" + _vm.showCard.code
+          }
+        },
+        [_vm._v("\n            destinations details\n        ")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationItinerary.vue?vue&type=template&id=3acdda30&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationItinerary.vue?vue&type=template&id=3acdda30& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "col-md-12 text-center mb-5" }, [
+      _c("h2", { staticClass: "heading-view text-uppercase mt-4 mb-5" }, [
+        _vm._v("\n            " + _vm._s(_vm.destination.title) + "\n        ")
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "destination-description" }, [
+        _vm._v(
+          "\n            " + _vm._s(_vm.destination.description) + "\n        "
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row mt-5 container", staticStyle: { margin: "auto" } },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._l(_vm.destination.itineraries, function(viewDestination) {
+          return _vm.selected === viewDestination.label
+            ? _c(
+                "div",
+                { staticClass: "row" },
+                [
+                  _vm._l(viewDestination.itinerary, function(travel) {
+                    return _c(
+                      "div",
+                      {
+                        staticClass: "col-md-4 text-left mb-5",
+                        attrs: { id: "itinerary" }
+                      },
+                      [
+                        _c(
+                          "h3",
+                          {
+                            staticClass:
+                              "destinations-details-gray-headings mt-4 mb-4"
+                          },
+                          [
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(travel.date) +
+                                "\n                "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "destination-description" }, [
+                          _vm._v(
+                            "\n                    " +
+                              _vm._s(travel.activity) +
+                              "\n                "
+                          )
+                        ])
+                      ]
+                    )
+                  }),
+                  _vm._v(" "),
+                  _vm._m(1, true)
+                ],
+                2
+              )
+            : _vm._e()
+        })
+      ],
+      2
+    ),
+    _vm._v(" "),
+    _c("hr", {
+      staticStyle: { "border-top": "1px solid #7070707a !important" }
+    }),
+    _vm._v(" "),
+    _vm._m(2)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-12 text-center" }, [
+      _c(
+        "h3",
+        { staticClass: "destinations-details-gray-headings mt-4 mb-4" },
+        [_vm._v("\n                itinerary November\n            ")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-8 text-left mb-5" }, [
+      _c("div", {
+        staticStyle: { width: "100%", height: "100%" },
+        attrs: { id: "map" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-12 text-left mb-5" }, [
+      _c("h2", { staticClass: "heading-view mt-4 mb-5" }, [
+        _vm._v("\n            explore\n        ")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationsHome.vue?vue&type=template&id=ae110e22&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/destinationsHome.vue?vue&type=template&id=ae110e22& ***!
@@ -19731,92 +20031,12 @@ var render = function() {
       "div",
       { staticClass: "row" },
       _vm._l(_vm.destinationsThumbnail, function(destination) {
-        return _c("div", { staticClass: "col-md-5 mb-5" }, [
-          _c("div", { staticClass: "card", staticStyle: { width: "18rem" } }, [
-            _c("img", {
-              staticClass: "card-img-top",
-              attrs: { src: destination.image, alt: "Card image cap" }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body" }, [
-              _c("h5", { staticClass: "card-title pb-2" }, [
-                _vm._v(_vm._s(destination.title))
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v(_vm._s(destination.description))
-              ]),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "row mb-4" },
-                [
-                  _vm._l(5, function(i) {
-                    return _c(
-                      "div",
-                      {
-                        staticClass: "col-md-1 col-sm-1 col-xs-1",
-                        staticStyle: {
-                          width: "auto !important",
-                          "padding-right": "0 !important"
-                        }
-                      },
-                      [
-                        i <= destination.review
-                          ? _c("img", {
-                              attrs: { src: "/images/golden-star.png", alt: "" }
-                            })
-                          : i > destination.review
-                          ? _c("img", {
-                              attrs: { src: "/images/empty-star.png", alt: "" }
-                            })
-                          : _vm._e()
-                      ]
-                    )
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "text-right col-md-7 col-sm-7 col-xs-7",
-                      staticStyle: { width: "auto" }
-                    },
-                    [
-                      _c(
-                        "p",
-                        {
-                          staticClass: "card-price",
-                          staticStyle: { "padding-top": "0.3rem" }
-                        },
-                        [_vm._v("starting from $" + _vm._s(destination.price))]
-                      )
-                    ]
-                  )
-                ],
-                2
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn btn-primary text-uppercase",
-                  attrs: {
-                    id: "destinations-details-cta",
-                    value: destination.code,
-                    href: "/view?destination=" + destination.code
-                  }
-                },
-                [
-                  _vm._v(
-                    "\n                        destinations details\n                    "
-                  )
-                ]
-              )
-            ])
-          ])
-        ])
+        return _c(
+          "div",
+          { staticClass: "col-md-5 mb-5" },
+          [_c("destinations-cards", { attrs: { showCard: destination } })],
+          1
+        )
       }),
       0
     )
@@ -19844,264 +20064,166 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-md-12" }, [
-    _c(
-      "div",
-      { staticClass: "row" },
-      _vm._l(_vm.destinationsInfo, function(destination) {
-        return destination.city === _vm.displayCityInfo
-          ? _c("div", { staticClass: "col-md-12 mb-5" }, [
-              _c("div", [
-                _c("div", { staticClass: "col-md-12 text-center mb-5" }, [
-                  _c(
-                    "h2",
-                    { staticClass: "heading-view text-uppercase mt-4 mb-5" },
-                    [
-                      _vm._v(
-                        "\n                            " +
-                          _vm._s(destination.title) +
-                          "\n                        "
-                      )
-                    ]
-                  ),
+  return _c(
+    "div",
+    _vm._l(_vm.destinationsInfo, function(destination) {
+      return destination.city === _vm.displayCityInfo
+        ? _c("div", [
+            _c("form", { attrs: { action: "/", method: "post" } }, [
+              _c("div", { staticClass: "home-box" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "sr-only",
+                        attrs: { for: "staticEmail2" }
+                      },
+                      [_vm._v("Name")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control-plaintext book-now",
+                      attrs: { type: "text", readonly: "", id: "staticEmail2" },
+                      domProps: { value: destination.from }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c("p", { staticClass: "destination-description" }, [
-                    _vm._v(
-                      "\n                            " +
-                        _vm._s(destination.description) +
-                        "\n                        "
+                  _c("div", { staticClass: "col-md-4" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "sr-only",
+                        attrs: { for: "staticEmail3" }
+                      },
+                      [_vm._v("Dates")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.selected,
+                            expression: "selected"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        staticStyle: { width: "70% !important" },
+                        attrs: { id: "staticEmail3" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.selected = $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { disabled: "", value: "" } }, [
+                          _vm._v("Choose dates")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(destination.itineraries, function(option) {
+                          return _c(
+                            "option",
+                            { domProps: { value: option.label } },
+                            [_vm._v(_vm._s(option.label))]
+                          )
+                        })
+                      ],
+                      2
                     )
-                  ])
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(0, true)
                 ]),
                 _vm._v(" "),
                 _c(
-                  "div",
+                  "button",
                   {
-                    staticClass: "row mt-5 container",
-                    staticStyle: { margin: "auto" }
+                    staticClass: "btn btn-primary text-uppercase",
+                    attrs: { type: "submit" }
                   },
-                  [
-                    _vm._m(0, true),
-                    _vm._v(" "),
-                    _vm._l(destination.itinerary, function(days) {
-                      return _c(
-                        "div",
-                        {
-                          staticClass: "col-md-4 text-left mb-5",
-                          attrs: { id: "itinerary" }
-                        },
-                        [
-                          _c(
-                            "h3",
-                            {
-                              staticClass:
-                                "destinations-details-gray-headings mt-4 mb-4"
-                            },
-                            [
-                              _vm._v(
-                                "\n                                " +
-                                  _vm._s(days.date) +
-                                  "\n                            "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "destination-description" }, [
-                            _vm._v(
-                              "\n                                " +
-                                _vm._s(days.activity) +
-                                "\n                            "
-                            )
-                          ])
-                        ]
-                      )
-                    }),
-                    _vm._v(" "),
-                    _vm._m(1, true)
-                  ],
-                  2
-                ),
-                _vm._v(" "),
-                _c("hr", {
-                  staticStyle: {
-                    "border-top": "1px solid #7070707a !important"
-                  }
-                }),
-                _vm._v(" "),
-                _vm._m(2, true),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-md-12 text-left" }, [
+                  [_vm._v("\n                    book now\n                ")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "col-md-12" }, [
+                _c("div", { staticClass: "row" }, [
                   _c(
                     "div",
-                    { staticClass: "row" },
-                    _vm._l(_vm.destinationsCards, function(showCard) {
-                      return showCard.code !== _vm.displayCityInfo
-                        ? _c("div", { staticClass: "col-md-4 mb-5" }, [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "card",
-                                staticStyle: { width: "18rem" }
-                              },
-                              [
-                                _c("img", {
-                                  staticClass: "card-img-top",
-                                  attrs: {
-                                    src: showCard.image,
-                                    alt: "Card image cap"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "card-body" }, [
-                                  _c("h5", { staticClass: "card-title pb-2" }, [
-                                    _vm._v(_vm._s(showCard.title))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("p", { staticClass: "card-text" }, [
-                                    _vm._v(_vm._s(showCard.description))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("hr"),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "row mb-4" },
-                                    [
-                                      _vm._l(5, function(i) {
-                                        return _c(
-                                          "div",
-                                          {
-                                            staticClass:
-                                              "col-md-1 col-sm-1 col-xs-1",
-                                            staticStyle: {
-                                              width: "auto !important",
-                                              "padding-right": "0 !important"
-                                            }
-                                          },
-                                          [
-                                            i <= showCard.review
-                                              ? _c("img", {
-                                                  attrs: {
-                                                    src:
-                                                      "/images/golden-star.png",
-                                                    alt: ""
-                                                  }
-                                                })
-                                              : i > showCard.review
-                                              ? _c("img", {
-                                                  attrs: {
-                                                    src:
-                                                      "/images/empty-star.png",
-                                                    alt: ""
-                                                  }
-                                                })
-                                              : _vm._e()
-                                          ]
-                                        )
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "text-right col-md-7 col-sm-7 col-xs-7",
-                                          staticStyle: { width: "auto" }
-                                        },
-                                        [
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass: "card-price",
-                                              staticStyle: {
-                                                "padding-top": "0.3rem"
-                                              }
-                                            },
-                                            [
-                                              _vm._v(
-                                                "starting from $" +
-                                                  _vm._s(showCard.price)
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      )
-                                    ],
-                                    2
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    {
-                                      staticClass:
-                                        "btn btn-primary text-uppercase",
-                                      attrs: {
-                                        id: "destinations-details-cta",
-                                        value: showCard.code,
-                                        href:
-                                          "/view?destination=" + showCard.code
-                                      }
-                                    },
-                                    [
-                                      _vm._v(
-                                        "\n                                            destinations details\n                                        "
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ]
-                            )
-                          ])
-                        : _vm._e()
-                    }),
-                    0
+                    { staticClass: "col-md-12 mb-5" },
+                    [
+                      _c("destination-itinerary", {
+                        attrs: {
+                          destination: destination,
+                          selected: _vm.selected
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-md-12 text-left" }, [
+                        _c(
+                          "div",
+                          { staticClass: "row" },
+                          _vm._l(_vm.destinationsCards, function(showCard) {
+                            return showCard.code !== _vm.displayCityInfo
+                              ? _c(
+                                  "div",
+                                  { staticClass: "col-md-4 mb-5" },
+                                  [
+                                    _c("destinations-cards", {
+                                      attrs: { showCard: showCard }
+                                    })
+                                  ],
+                                  1
+                                )
+                              : _vm._e()
+                          }),
+                          0
+                        )
+                      ])
+                    ],
+                    1
                   )
                 ])
               ])
             ])
-          : _vm._e()
-      }),
-      0
-    )
-  ])
+          ])
+        : _vm._e()
+    }),
+    0
+  )
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12 text-center" }, [
+    return _c("div", { staticClass: "col-md-4 text-left" }, [
       _c(
-        "h3",
-        { staticClass: "destinations-details-gray-headings mt-4 mb-4" },
-        [
-          _vm._v(
-            "\n                                itinerary November\n                            "
-          )
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-8 text-left mb-5" }, [
-      _c("div", {
-        staticStyle: { width: "100%", height: "100%" },
-        attrs: { id: "map" }
+        "label",
+        { staticClass: "book-now", attrs: { for: "formGroupExampleInput" } },
+        [_vm._v("Enter number of tickets")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control",
+        staticStyle: { display: "inline-block", width: "20%" },
+        attrs: { type: "text", id: "formGroupExampleInput", placeholder: "0" }
       })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12 text-left mb-5" }, [
-      _c("h2", { staticClass: "heading-view mt-4 mb-5" }, [
-        _vm._v(
-          "\n                            explore\n                        "
-        )
-      ])
     ])
   }
 ]
@@ -35162,6 +35284,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 Vue.component('destinations-thumbnails', __webpack_require__(/*! ./components/destinationsHome.vue */ "./resources/js/components/destinationsHome.vue")["default"]);
 Vue.component('destinations-info', __webpack_require__(/*! ./components/destinationsView.vue */ "./resources/js/components/destinationsView.vue")["default"]);
+Vue.component('destinations-cards', __webpack_require__(/*! ./components/destinationCards.vue */ "./resources/js/components/destinationCards.vue")["default"]);
+Vue.component('destination-itinerary', __webpack_require__(/*! ./components/destinationItinerary.vue */ "./resources/js/components/destinationItinerary.vue")["default"]);
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   //with history you remove '#'
   mode: "history",
@@ -35217,6 +35341,144 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/destinationCards.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/destinationCards.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _destinationCards_vue_vue_type_template_id_dd873080___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./destinationCards.vue?vue&type=template&id=dd873080& */ "./resources/js/components/destinationCards.vue?vue&type=template&id=dd873080&");
+/* harmony import */ var _destinationCards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./destinationCards.vue?vue&type=script&lang=js& */ "./resources/js/components/destinationCards.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _destinationCards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _destinationCards_vue_vue_type_template_id_dd873080___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _destinationCards_vue_vue_type_template_id_dd873080___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/destinationCards.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/destinationCards.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/components/destinationCards.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationCards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./destinationCards.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationCards.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationCards_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/destinationCards.vue?vue&type=template&id=dd873080&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/destinationCards.vue?vue&type=template&id=dd873080& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationCards_vue_vue_type_template_id_dd873080___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./destinationCards.vue?vue&type=template&id=dd873080& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationCards.vue?vue&type=template&id=dd873080&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationCards_vue_vue_type_template_id_dd873080___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationCards_vue_vue_type_template_id_dd873080___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/destinationItinerary.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/destinationItinerary.vue ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _destinationItinerary_vue_vue_type_template_id_3acdda30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./destinationItinerary.vue?vue&type=template&id=3acdda30& */ "./resources/js/components/destinationItinerary.vue?vue&type=template&id=3acdda30&");
+/* harmony import */ var _destinationItinerary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./destinationItinerary.vue?vue&type=script&lang=js& */ "./resources/js/components/destinationItinerary.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _destinationItinerary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _destinationItinerary_vue_vue_type_template_id_3acdda30___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _destinationItinerary_vue_vue_type_template_id_3acdda30___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/destinationItinerary.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/destinationItinerary.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/destinationItinerary.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationItinerary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./destinationItinerary.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationItinerary.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationItinerary_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/destinationItinerary.vue?vue&type=template&id=3acdda30&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/destinationItinerary.vue?vue&type=template&id=3acdda30& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationItinerary_vue_vue_type_template_id_3acdda30___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./destinationItinerary.vue?vue&type=template&id=3acdda30& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/destinationItinerary.vue?vue&type=template&id=3acdda30&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationItinerary_vue_vue_type_template_id_3acdda30___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_destinationItinerary_vue_vue_type_template_id_3acdda30___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
@@ -35365,7 +35627,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic...\",\"review\":4,\"price\":\"800\",\"code\":\"new-york\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...\",\"review\":4,\"price\":\"1,200\",\"code\":\"bora-bora\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall have included border controls, allowing the imposition of duties...\",\"review\":3,\"price\":\"1,640\",\"code\":\"great-wall\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion...\",\"review\":5,\"price\":\"2,000\",\"code\":\"paris\"}]");
+module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic...\",\"review\":4,\"price\":\"800\",\"code\":\"new-york\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...\",\"review\":4,\"price\":\"1,200\",\"code\":\"bora-bora\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall have included border controls, allowing the imposition of duties...\",\"review\":3,\"price\":\"1,640\",\"code\":\"great-wall\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion...\",\"review\":5,\"price\":\"1,000\",\"code\":\"paris\"}]");
 
 /***/ }),
 
@@ -35373,10 +35635,10 @@ module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":
 /*!**************************************************!*\
   !*** ./resources/json/destinations-details.json ***!
   \**************************************************/
-/*! exports provided: 0, 1, default */
+/*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"city\":\"new-york\",\"title\":\"ny 2020\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},\"day-2\":{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},\"day-3\":{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-4\":{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}},\"map\":\"images/nyc-map.png\"},{\"city\":\"bora-bora\",\"title\":\"bb 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itinerary\":{\"day-1\":{\"date\":\"Sat 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-2\":{\"date\":\"Sun 11\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-3\":{\"date\":\"Mon 12\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},\"day-4\":{\"date\":\"Tues 13\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}},\"map\":\"images/nyc-map.png\"}]");
+module.exports = JSON.parse("[{\"city\":\"new-york\",\"from\":\"New York, USA\",\"dates\":\"Sat 7 to Tues 10\",\"title\":\"ny 2020\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Sat 12 to Tues 20\",\"itinerary\":[{\"date\":\"Sat 12\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 20\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}],\"map\":\"images/nyc-map.png\"},{\"city\":\"bora-bora\",\"from\":\"Bora Bora, Tahiti\",\"dates\":\"Sat 7 to Tues 10\",\"title\":\"bb 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}],\"map\":\"images/nyc-map.png\"},{\"city\":\"great-wall\",\"from\":\"Great Wall, China\",\"dates\":\"Sat 7 to Tues 10\",\"title\":\"ch 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}],\"map\":\"images/nyc-map.png\"},{\"city\":\"paris\",\"from\":\"Paris, France\",\"dates\":\"Sat 7 to Tues 10\",\"title\":\"pa 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}],\"map\":\"images/nyc-map.png\"}]");
 
 /***/ }),
 

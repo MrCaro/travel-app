@@ -11,7 +11,7 @@
                         <div class="col-md-4">
                             <label class="sr-only" for="staticEmail3">Dates</label>
                             <select v-model="selected" id="staticEmail3" class="form-control" style="width: 70% !important;">
-                                <option disabled value="">Choose dates</option>
+                                <option disabled value="">{{destination.month}} dates</option>
                                 <option v-for="option in destination.itineraries" :value="option.label">{{option.label}}</option>
                             </select>
                         </div>

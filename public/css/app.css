@@ -63,6 +63,10 @@
   border-radius: 0;
 }
 
+.home-box button:hover {
+  box-shadow: 4px 4px 10px #212529;
+}
+
 #explore-heading {
   color: #898989;
   font-size: calc(70px + (110 - 70) * ((100vw - 576px) / (1140 - 576)));

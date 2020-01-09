@@ -19911,7 +19911,19 @@ var render = function() {
       "div",
       { staticClass: "row mt-5 container", staticStyle: { margin: "auto" } },
       [
-        _vm._m(0),
+        _c("div", { staticClass: "col-md-12 text-center" }, [
+          _c(
+            "h3",
+            { staticClass: "destinations-details-gray-headings mt-4 mb-4" },
+            [
+              _vm._v(
+                "\n                itinerary " +
+                  _vm._s(_vm.destination.month) +
+                  "\n            "
+              )
+            ]
+          )
+        ]),
         _vm._v(" "),
         _vm._l(_vm.destination.itineraries, function(viewDestination) {
           return _vm.selected === viewDestination.label
@@ -19953,7 +19965,7 @@ var render = function() {
                     )
                   }),
                   _vm._v(" "),
-                  _vm._m(1, true)
+                  _vm._m(0, true)
                 ],
                 2
               )
@@ -19967,22 +19979,10 @@ var render = function() {
       staticStyle: { "border-top": "1px solid #7070707a !important" }
     }),
     _vm._v(" "),
-    _vm._m(2)
+    _vm._m(1)
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12 text-center" }, [
-      _c(
-        "h3",
-        { staticClass: "destinations-details-gray-headings mt-4 mb-4" },
-        [_vm._v("\n                itinerary November\n            ")]
-      )
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -20131,7 +20131,7 @@ var render = function() {
                       },
                       [
                         _c("option", { attrs: { disabled: "", value: "" } }, [
-                          _vm._v("Choose dates")
+                          _vm._v(_vm._s(destination.month) + " dates")
                         ]),
                         _vm._v(" "),
                         _vm._l(destination.itineraries, function(option) {
@@ -35627,7 +35627,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic...\",\"review\":4,\"price\":\"800\",\"code\":\"new-york\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...\",\"review\":4,\"price\":\"1,200\",\"code\":\"bora-bora\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall have included border controls, allowing the imposition of duties...\",\"review\":3,\"price\":\"1,640\",\"code\":\"great-wall\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion...\",\"review\":5,\"price\":\"1,000\",\"code\":\"paris\"}]");
+module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":\"New York, USA\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic...\",\"review\":4,\"price\":\"800\",\"code\":\"new-york\"},{\"image\":\"images/bora-bora-thumbnail.png\",\"title\":\"Bora Bora, Tahiti\",\"description\":\"Bora Bora is a 30.55 km2 (12 sq mi) island group in the Leeward group in the western...\",\"review\":4,\"price\":\"1,200\",\"code\":\"bora-bora\"},{\"image\":\"images/great-wall-thumbnail.png\",\"title\":\"Great Wall, China\",\"description\":\"The Great Wall of China is the collective name of a series of fortification systems...\",\"review\":3,\"price\":\"1,640\",\"code\":\"great-wall\"},{\"image\":\"images/paris-thumbnail.png\",\"title\":\"Paris, France\",\"description\":\"Paris, France's capital, is a major European city and a global center for art...\",\"review\":5,\"price\":\"1,000\",\"code\":\"paris\"}]");
 
 /***/ }),
 
@@ -35638,7 +35638,7 @@ module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":
 /*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"city\":\"new-york\",\"from\":\"New York, USA\",\"dates\":\"Sat 7 to Tues 10\",\"title\":\"ny 2020\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Sat 12 to Tues 20\",\"itinerary\":[{\"date\":\"Sat 12\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 20\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}],\"map\":\"images/nyc-map.png\"},{\"city\":\"bora-bora\",\"from\":\"Bora Bora, Tahiti\",\"dates\":\"Sat 7 to Tues 10\",\"title\":\"bb 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}],\"map\":\"images/nyc-map.png\"},{\"city\":\"great-wall\",\"from\":\"Great Wall, China\",\"dates\":\"Sat 7 to Tues 10\",\"title\":\"ch 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}],\"map\":\"images/nyc-map.png\"},{\"city\":\"paris\",\"from\":\"Paris, France\",\"dates\":\"Sat 7 to Tues 10\",\"title\":\"pa 2020\",\"description\":\"Bora Bora comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"subtitle\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean...\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}],\"map\":\"images/nyc-map.png\"}]");
+module.exports = JSON.parse("[{\"city\":\"new-york\",\"from\":\"New York, USA\",\"title\":\"ny 2020\",\"month\":\"November\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Sat 14 to Tues 17\",\"itinerary\":[{\"date\":\"Sat 14\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 15\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 16\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 17\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Sat 21 to Tues 24\",\"itinerary\":[{\"date\":\"Sat 21\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 22\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 23\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 24\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"bora-bora\",\"from\":\"Bora Bora, Tahiti\",\"title\":\"bb 2020\",\"month\":\"July\",\"description\":\"Bora Bora is a 30.55 km2 (12 sq mi) island group in the Leeward group in the western part of the Society Islands of French Polynesia, an overseas collectivity of the French Republic in the Pacific Ocean. The main island, located about 230 kilometres (143 miles) northwest of Papeete, is surrounded by a lagoon and a barrier reef.\",\"itineraries\":[{\"label\":\"Wed 1 to Tues 7\",\"itinerary\":[{\"date\":\"Wed 1\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Thu 2\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Fri 3\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sat 4\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sun 5\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Mon 6\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 7\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Wed 22 to Tue 28\",\"itinerary\":[{\"date\":\"Wed 22\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Thu 23\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Fri 24\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sat 25\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sun 26\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Mon 27\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tue 28\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"great-wall\",\"from\":\"Great Wall, China\",\"title\":\"ch 2020\",\"month\":\"July\",\"description\":\"The Great Wall of China is the collective name of a series of fortification systems generally built across the historical northern borders of China to protect and consolidate territories of Chinese states and empires against various nomadic groups of the steppe and their polities.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"paris\",\"from\":\"Paris, France\",\"title\":\"pa 2020\",\"month\":\"December\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]}]");
 
 /***/ }),
 

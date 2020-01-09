@@ -10,7 +10,7 @@
     {
         "image": "images/bora-bora-thumbnail.png",
         "title" : "Bora Bora, Tahiti",
-        "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia...",
+        "description": "Bora Bora is a 30.55 km2 (12 sq mi) island group in the Leeward group in the western...",
         "review": 4,
         "price":  "1,200",
         "code": "bora-bora"
@@ -18,7 +18,7 @@
      {
         "image": "images/great-wall-thumbnail.png",
         "title" : "Great Wall, China",
-        "description": "The Great Wall have included border controls, allowing the imposition of duties...",
+        "description": "The Great Wall of China is the collective name of a series of fortification systems...",
         "review": 3,
         "price": "1,640",
          "code": "great-wall"
@@ -26,7 +26,7 @@
     {
         "image": "images/paris-thumbnail.png",
         "title" : "Paris, France",
-        "description": "Paris, France's capital, is a major European city and a global center for art, fashion...",
+        "description": "Paris, France's capital, is a major European city and a global center for art...",
         "review": 5,
         "price":  "1,000",
         "code": "paris"

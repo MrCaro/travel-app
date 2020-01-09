@@ -1973,6 +1973,20 @@ __webpack_require__.r(__webpack_exports__);
           customZoom = 12;
           iconDay1 = 'theatre';
           break;
+
+        case 'great-wall':
+          longitud = 116.5704;
+          latitud = 40.4319;
+          customZoom = 8;
+          iconDay1 = 'theatre';
+          break;
+
+        case 'paris':
+          longitud = 2.3522;
+          latitud = 48.8566;
+          customZoom = 12;
+          iconDay1 = 'theatre';
+          break;
       }
 
       mapboxgl.accessToken = 'pk.eyJ1IjoiY2FybG9zY2FybzE5OTQiLCJhIjoiY2s0NGx6a3hsMDA0MDNlcnRsMnZkdnZ5OSJ9.LZ7CukT8uDmuqFKqzEko4g';

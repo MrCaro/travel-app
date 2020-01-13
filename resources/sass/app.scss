@@ -5,7 +5,7 @@
 body {
     font-family: $titling-font;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 h1 {
@@ -20,5 +20,5 @@ footer {
     color: white;
     font-size: 12px;
     font-weight: $bold;
-    margin-top: 4rem;
+    margin: auto;
 }

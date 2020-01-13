@@ -20113,79 +20113,97 @@ var render = function() {
             _c("form", { attrs: { action: "/", method: "post" } }, [
               _c("div", { staticClass: "home-box" }, [
                 _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-md-4" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "sr-only",
-                        attrs: { for: "staticEmail2" }
-                      },
-                      [_vm._v("Name")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      staticClass: "form-control-plaintext book-now",
-                      attrs: { type: "text", readonly: "", id: "staticEmail2" },
-                      domProps: { value: destination.from }
-                    })
-                  ]),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-4",
+                      staticStyle: { margin: "auto" }
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "sr-only",
+                          attrs: { for: "staticEmail2" }
+                        },
+                        [_vm._v("Name")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control-plaintext book-now",
+                        attrs: {
+                          type: "text",
+                          readonly: "",
+                          id: "staticEmail2"
+                        },
+                        domProps: { value: destination.from }
+                      })
+                    ]
+                  ),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-4" }, [
-                    _c(
-                      "label",
-                      {
-                        staticClass: "sr-only",
-                        attrs: { for: "staticEmail3" }
-                      },
-                      [_vm._v("Dates")]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.selected,
-                            expression: "selected"
+                  _c(
+                    "div",
+                    {
+                      staticClass: "col-md-4",
+                      staticStyle: { margin: "auto" }
+                    },
+                    [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "sr-only",
+                          attrs: { for: "staticEmail3" }
+                        },
+                        [_vm._v("Dates")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.selected,
+                              expression: "selected"
+                            }
+                          ],
+                          staticClass: "form-control input-responsive",
+                          staticStyle: { width: "70%" },
+                          attrs: { id: "staticEmail3" },
+                          on: {
+                            change: function($event) {
+                              var $$selectedVal = Array.prototype.filter
+                                .call($event.target.options, function(o) {
+                                  return o.selected
+                                })
+                                .map(function(o) {
+                                  var val = "_value" in o ? o._value : o.value
+                                  return val
+                                })
+                              _vm.selected = $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            }
                           }
+                        },
+                        [
+                          _c("option", { attrs: { disabled: "", value: "" } }, [
+                            _vm._v(_vm._s(destination.month) + " dates")
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(destination.itineraries, function(option) {
+                            return _c(
+                              "option",
+                              { domProps: { value: option.label } },
+                              [_vm._v(_vm._s(option.label))]
+                            )
+                          })
                         ],
-                        staticClass: "form-control",
-                        staticStyle: { width: "70% !important" },
-                        attrs: { id: "staticEmail3" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.selected = $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          }
-                        }
-                      },
-                      [
-                        _c("option", { attrs: { disabled: "", value: "" } }, [
-                          _vm._v(_vm._s(destination.month) + " dates")
-                        ]),
-                        _vm._v(" "),
-                        _vm._l(destination.itineraries, function(option) {
-                          return _c(
-                            "option",
-                            { domProps: { value: option.label } },
-                            [_vm._v(_vm._s(option.label))]
-                          )
-                        })
-                      ],
-                      2
-                    )
-                  ]),
+                        2
+                      )
+                    ]
+                  ),
                   _vm._v(" "),
                   _c("div", { staticClass: "col-md-4 text-left" }, [
                     _c(
@@ -20206,7 +20224,7 @@ var render = function() {
                           expression: "numberOfTickets"
                         }
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control input-responsive",
                       staticStyle: { display: "inline-block", width: "20%" },
                       attrs: {
                         type: "number",

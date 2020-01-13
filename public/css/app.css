@@ -34,7 +34,7 @@
   margin: auto;
   background-color: white;
   position: relative;
-  top: -3.3rem;
+  top: -4rem;
   padding: 2rem 6rem;
   box-shadow: 0 15px 30px rgba(101, 101, 101, 0.2);
 }
@@ -56,7 +56,7 @@
 .home-box button {
   position: absolute;
   width: 12%;
-  top: 30%;
+  top: 33%;
   right: -6%;
   background: linear-gradient(45deg, #01692D, #00FF62);
   border: none;
@@ -308,6 +308,7 @@
 .destination-description {
   font-size: 25px;
   font-weight: 100 !important;
+  word-wrap: break-word;
 }
 
 .destinations-details-gray-headings {
@@ -330,15 +331,20 @@
   }
 
   .form-control {
-    height: calc(1em + .3rem + 2px) !important;
     font-size: 0.7rem !important;
+    width: 100% !important;
+    height: 2rem !important;
+  }
+
+  #map {
+    height: 50vh !important;
   }
 }
 
 body {
   font-family: titling-gothic-fb, sans-serif !important;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 h1 {
@@ -353,6 +359,6 @@ footer {
   color: white;
   font-size: 12px;
   font-weight: 700 !important;
-  margin-top: 4rem;
+  margin: auto;
 }
 

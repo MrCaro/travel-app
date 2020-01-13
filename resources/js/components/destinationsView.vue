@@ -4,20 +4,20 @@
             <form action="/" method="post">
                 <div class="home-box">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4" style="margin: auto">
                             <label class="sr-only" for="staticEmail2">Name</label>
                             <input type="text" readonly class="form-control-plaintext book-now" id="staticEmail2" :value="destination.from">
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4" style="margin: auto">
                             <label class="sr-only" for="staticEmail3">Dates</label>
-                            <select v-model="selected" id="staticEmail3" class="form-control" style="width: 70% !important;">
+                            <select v-model="selected" id="staticEmail3" class="form-control input-responsive" style="width: 70%;">
                                 <option disabled value="">{{destination.month}} dates</option>
                                 <option v-for="option in destination.itineraries" :value="option.label">{{option.label}}</option>
                             </select>
                         </div>
                         <div class="col-md-4 text-left">
                             <label for="formGroupExampleInput" class="book-now">Enter number of tickets</label>
-                            <input type="number" class="form-control" id="formGroupExampleInput" v-model="numberOfTickets"  placeholder="0" style="display: inline-block; width: 20%;">
+                            <input type="number" class="form-control input-responsive" id="formGroupExampleInput" v-model="numberOfTickets"  placeholder="0" style="display: inline-block; width: 20%;">
                             <p>Total: ${{800 * numberOfTickets}}</p>
                         </div>
                     </div>

@@ -13,8 +13,14 @@
         <div class="row mt-5 container" style="margin: auto">
             <div class="col-md-12 text-center">
                 <h3 class="destinations-details-gray-headings mt-4 mb-4">
-                    itinerary {{destination.month}}
+                    Itinerary {{destination.month}}
                 </h3>
+            </div>
+            <!-- message to select date ranges -->
+            <div class="text-center col-md-12" v-if="selected === ''">
+                <div class="alert alert-info" role="alert">
+                    please select a date range in the book now area at the top of the page to display itinerary information
+                </div>
             </div>
             <!-- days and activities loop -->
             <div v-for="viewDestination in destination.itineraries" v-if="selected === viewDestination.label" class="row">
@@ -27,7 +33,7 @@
                     </p>
                 </div>
                 <div class="col-md-8 text-left mb-5" >
-                    <div id="map" style="width: 100%; height: 100%;"></div>
+                    <div id="map" style="width: 100%; height: 100%; box-shadow: 0 15px 30px rgba(124, 124, 124, 0.16);"></div>
                 </div>
             </div>
         </div>

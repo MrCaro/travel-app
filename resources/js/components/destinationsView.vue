@@ -17,7 +17,8 @@
                         </div>
                         <div class="col-md-4 text-left">
                             <label for="formGroupExampleInput" class="book-now">Enter number of tickets</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="0" style="display: inline-block; width: 20%;">
+                            <input type="number" class="form-control" id="formGroupExampleInput" v-model="numberOfTickets"  placeholder="0" style="display: inline-block; width: 20%;">
+                            <p>Total: ${{800 * numberOfTickets}}</p>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary text-uppercase" style="">
@@ -26,11 +27,11 @@
                 </div>
             </form>
             <div class="container">
-                <div class="col-md-12">
+                <div class="">
                     <div class="row">
                         <div  class="col-md-12 mb-5">
                             <destination-itinerary v-bind:destination = "destination" v-bind:selected = "selected"></destination-itinerary>
-                            <div class="col-md-12 text-left">
+                            <div class="text-left">
                                 <div class="row">
                                     <div v-for="showCard in destinationsCards" v-if="showCard.code !== displayCityInfo" class="col-md-4 mb-5">
                                         <destinations-cards v-bind:showCard = showCard></destinations-cards>
@@ -55,7 +56,9 @@
                 destinationsInfo: json_info,
                 destinationsCards: json_cards,
                 displayCityInfo: this.$route.query.destination,
-                selected: ""
+                selected: "",
+                numberOfTickets: "1",
+                total: "800"
             }
         },
 

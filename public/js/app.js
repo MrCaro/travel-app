@@ -1921,6 +1921,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "destinationItinerary",
   props: ['destination', 'selected'],
@@ -2164,6 +2170,7 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2172,7 +2179,9 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
       destinationsInfo: _json_destinations_details_json__WEBPACK_IMPORTED_MODULE_0__,
       destinationsCards: _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1__,
       displayCityInfo: this.$route.query.destination,
-      selected: ""
+      selected: "",
+      numberOfTickets: "1",
+      total: "800"
     };
   },
   mounted: function mounted() {
@@ -19931,13 +19940,27 @@ var render = function() {
             { staticClass: "destinations-details-gray-headings mt-4 mb-4" },
             [
               _vm._v(
-                "\n                itinerary " +
+                "\n                Itinerary " +
                   _vm._s(_vm.destination.month) +
                   "\n            "
               )
             ]
           )
         ]),
+        _vm._v(" "),
+        _vm.selected === ""
+          ? _c("div", { staticClass: "text-center col-md-12" }, [
+              _c(
+                "div",
+                { staticClass: "alert alert-info", attrs: { role: "alert" } },
+                [
+                  _vm._v(
+                    "\n                please select a date range in the book now area at the top of the page to display itinerary information\n            "
+                  )
+                ]
+              )
+            ])
+          : _vm._e(),
         _vm._v(" "),
         _vm._l(_vm.destination.itineraries, function(viewDestination) {
           return _vm.selected === viewDestination.label
@@ -20003,7 +20026,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-md-8 text-left mb-5" }, [
       _c("div", {
-        staticStyle: { width: "100%", height: "100%" },
+        staticStyle: {
+          width: "100%",
+          height: "100%",
+          "box-shadow": "0 15px 30px rgba(124, 124, 124, 0.16)"
+        },
         attrs: { id: "map" }
       })
     ])
@@ -20160,7 +20187,47 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _vm._m(0, true)
+                  _c("div", { staticClass: "col-md-4 text-left" }, [
+                    _c(
+                      "label",
+                      {
+                        staticClass: "book-now",
+                        attrs: { for: "formGroupExampleInput" }
+                      },
+                      [_vm._v("Enter number of tickets")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.numberOfTickets,
+                          expression: "numberOfTickets"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      staticStyle: { display: "inline-block", width: "20%" },
+                      attrs: {
+                        type: "number",
+                        id: "formGroupExampleInput",
+                        placeholder: "0"
+                      },
+                      domProps: { value: _vm.numberOfTickets },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.numberOfTickets = $event.target.value
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v("Total: $" + _vm._s(800 * _vm.numberOfTickets))
+                    ])
+                  ])
                 ]),
                 _vm._v(" "),
                 _c(
@@ -20175,7 +20242,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "col-md-12" }, [
+              _c("div", {}, [
                 _c("div", { staticClass: "row" }, [
                   _c(
                     "div",
@@ -20188,7 +20255,7 @@ var render = function() {
                         }
                       }),
                       _vm._v(" "),
-                      _c("div", { staticClass: "col-md-12 text-left" }, [
+                      _c("div", { staticClass: "text-left" }, [
                         _c(
                           "div",
                           { staticClass: "row" },
@@ -20221,26 +20288,7 @@ var render = function() {
     0
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4 text-left" }, [
-      _c(
-        "label",
-        { staticClass: "book-now", attrs: { for: "formGroupExampleInput" } },
-        [_vm._v("Enter number of tickets")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control",
-        staticStyle: { display: "inline-block", width: "20%" },
-        attrs: { type: "text", id: "formGroupExampleInput", placeholder: "0" }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -13,7 +13,7 @@
                     @yield('content')
             </div>
         </main>
-        <footer class="">
+        <footer style="">
             @include('includes.footer')
         </footer>
     </div>

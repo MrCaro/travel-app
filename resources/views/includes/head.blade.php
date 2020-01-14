@@ -5,6 +5,9 @@
 
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/ncj5fet.css">
+
+<!-- main css -->
+<link href="css/all.css" rel="stylesheet">
 <link href="css/app.css" rel="stylesheet">
 
 <!-- Bootstrap core CSS -->

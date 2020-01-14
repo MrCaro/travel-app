@@ -28,41 +28,24 @@
     font-size: $font-size-90;
 }
 
-.home-box {
+@mixin box {
     width: 80%;
     margin: auto;
     background-color: white;
     position: relative;
-    top: -4rem;
     padding: 2rem 6rem;
     box-shadow: 0 15px 30px rgba(101, 101, 101, .2);
+}
+
+.home-box {
+    @include box;
+    top: -3.3rem;
 
     p {
         color: $gray;
         margin: 0;
         font-weight: $bold;
         font-size: $font-size-18;
-    }
-
-    .book-now {
-        color: $gray;
-        margin: 0;
-        font-weight: $thin;
-        font-size: $font-size-18;
-    }
-
-    button {
-        position: absolute;
-        width: 12%;
-        top: 33%;
-        right: -6%;
-        background: linear-gradient(45deg, #01692D, #00FF62);
-        border: none;
-        border-radius: 0;
-
-        &:hover {
-            box-shadow: 4px 4px 10px #212529;
-        }
     }
 }
 

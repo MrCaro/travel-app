@@ -2171,6 +2171,10 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2180,8 +2184,7 @@ var _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__P
       destinationsCards: _json_destinations_card_json__WEBPACK_IMPORTED_MODULE_1__,
       displayCityInfo: this.$route.query.destination,
       selected: "",
-      numberOfTickets: "1",
-      total: "800"
+      numberOfTickets: "1"
     };
   },
   mounted: function mounted() {
@@ -20110,8 +20113,8 @@ var render = function() {
     _vm._l(_vm.destinationsInfo, function(destination) {
       return destination.city === _vm.displayCityInfo
         ? _c("div", [
-            _c("form", { attrs: { action: "/", method: "post" } }, [
-              _c("div", { staticClass: "home-box" }, [
+            _c("form", { attrs: { action: "/send-mail", method: "post" } }, [
+              _c("div", { staticClass: "destinations-box" }, [
                 _c("div", { staticClass: "row" }, [
                   _c(
                     "div",
@@ -20124,7 +20127,7 @@ var render = function() {
                         "label",
                         {
                           staticClass: "sr-only",
-                          attrs: { for: "staticEmail2" }
+                          attrs: { for: "destinationBook" }
                         },
                         [_vm._v("Name")]
                       ),
@@ -20132,11 +20135,29 @@ var render = function() {
                       _c("input", {
                         staticClass: "form-control-plaintext book-now",
                         attrs: {
+                          name: "destination",
                           type: "text",
                           readonly: "",
-                          id: "staticEmail2"
+                          id: "destinationBook"
                         },
                         domProps: { value: destination.from }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "label",
+                        { staticClass: "sr-only", attrs: { for: "monthBook" } },
+                        [_vm._v("Month")]
+                      ),
+                      _vm._v(" "),
+                      _c("input", {
+                        staticClass: "form-control-plaintext book-now",
+                        attrs: {
+                          name: "month",
+                          type: "text",
+                          readonly: "",
+                          id: "monthBook"
+                        },
+                        domProps: { value: destination.month }
                       })
                     ]
                   ),
@@ -20150,10 +20171,7 @@ var render = function() {
                     [
                       _c(
                         "label",
-                        {
-                          staticClass: "sr-only",
-                          attrs: { for: "staticEmail3" }
-                        },
+                        { staticClass: "sr-only", attrs: { for: "dateBook" } },
                         [_vm._v("Dates")]
                       ),
                       _vm._v(" "),
@@ -20170,7 +20188,7 @@ var render = function() {
                           ],
                           staticClass: "form-control input-responsive",
                           staticStyle: { width: "70%" },
-                          attrs: { id: "staticEmail3" },
+                          attrs: { name: "dates", id: "dateBook" },
                           on: {
                             change: function($event) {
                               var $$selectedVal = Array.prototype.filter
@@ -20210,7 +20228,7 @@ var render = function() {
                       "label",
                       {
                         staticClass: "book-now",
-                        attrs: { for: "formGroupExampleInput" }
+                        attrs: { for: "ticketsBook" }
                       },
                       [_vm._v("Enter number of tickets")]
                     ),
@@ -20227,8 +20245,9 @@ var render = function() {
                       staticClass: "form-control input-responsive",
                       staticStyle: { display: "inline-block", width: "20%" },
                       attrs: {
+                        name: "numberOfTickets",
                         type: "number",
-                        id: "formGroupExampleInput",
+                        id: "ticketsBook",
                         placeholder: "0"
                       },
                       domProps: { value: _vm.numberOfTickets },
@@ -20242,9 +20261,25 @@ var render = function() {
                       }
                     }),
                     _vm._v(" "),
-                    _c("p", [
-                      _vm._v("Total: $" + _vm._s(800 * _vm.numberOfTickets))
-                    ])
+                    _c(
+                      "label",
+                      { staticClass: "sr-only", attrs: { for: "priceBook" } },
+                      [_vm._v("Price")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      staticClass: "form-control-plaintext book-now",
+                      attrs: {
+                        name: "price",
+                        type: "text",
+                        readonly: "",
+                        id: "priceBook"
+                      },
+                      domProps: {
+                        value:
+                          "Total: $" + destination.price * _vm.numberOfTickets
+                      }
+                    })
                   ])
                 ]),
                 _vm._v(" "),
@@ -20254,7 +20289,11 @@ var render = function() {
                     staticClass: "btn btn-primary text-uppercase",
                     attrs: { type: "submit" }
                   },
-                  [_vm._v("\n                    book now\n                ")]
+                  [
+                    _vm._v(
+                      "\n                        book now\n                    "
+                    )
+                  ]
                 )
               ])
             ]),
@@ -35718,7 +35757,7 @@ module.exports = JSON.parse("[{\"image\":\"images/nyc-thumbnail.png\",\"title\":
 /*! exports provided: 0, 1, 2, 3, default */
 /***/ (function(module) {
 
-module.exports = JSON.parse("[{\"city\":\"new-york\",\"from\":\"New York, USA\",\"title\":\"ny 2020\",\"month\":\"November\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Sat 14 to Tues 17\",\"itinerary\":[{\"date\":\"Sat 14\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 15\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 16\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 17\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Sat 21 to Tues 24\",\"itinerary\":[{\"date\":\"Sat 21\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 22\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 23\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 24\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"bora-bora\",\"from\":\"Bora Bora, Tahiti\",\"title\":\"bb 2020\",\"month\":\"July\",\"description\":\"Bora Bora is a 30.55 km2 (12 sq mi) island group in the Leeward group in the western part of the Society Islands of French Polynesia, an overseas collectivity of the French Republic in the Pacific Ocean. The main island, located about 230 kilometres (143 miles) northwest of Papeete, is surrounded by a lagoon and a barrier reef.\",\"itineraries\":[{\"label\":\"Wed 1 to Tues 7\",\"itinerary\":[{\"date\":\"Wed 1\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Thu 2\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Fri 3\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sat 4\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sun 5\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Mon 6\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 7\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Wed 22 to Tue 28\",\"itinerary\":[{\"date\":\"Wed 22\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Thu 23\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Fri 24\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sat 25\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sun 26\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Mon 27\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tue 28\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"great-wall\",\"from\":\"Great Wall, China\",\"title\":\"ch 2020\",\"month\":\"July\",\"description\":\"The Great Wall of China is the collective name of a series of fortification systems generally built across the historical northern borders of China to protect and consolidate territories of Chinese states and empires against various nomadic groups of the steppe and their polities.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"paris\",\"from\":\"Paris, France\",\"title\":\"pa 2020\",\"month\":\"December\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]}]");
+module.exports = JSON.parse("[{\"city\":\"new-york\",\"from\":\"New York, USA\",\"title\":\"ny 2020\",\"month\":\"November\",\"price\":\"800\",\"description\":\"New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park. Broadway theater is staged in neon-lit Times Square.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Sat 14 to Tues 17\",\"itinerary\":[{\"date\":\"Sat 14\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 15\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 16\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 17\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Sat 21 to Tues 24\",\"itinerary\":[{\"date\":\"Sat 21\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 22\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 23\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 24\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"bora-bora\",\"from\":\"Bora Bora, Tahiti\",\"title\":\"bb 2020\",\"month\":\"July\",\"price\":\"1200\",\"description\":\"Bora Bora is a 30.55 km2 (12 sq mi) island group in the Leeward group in the western part of the Society Islands of French Polynesia, an overseas collectivity of the French Republic in the Pacific Ocean. The main island, located about 230 kilometres (143 miles) northwest of Papeete, is surrounded by a lagoon and a barrier reef.\",\"itineraries\":[{\"label\":\"Wed 1 to Tues 7\",\"itinerary\":[{\"date\":\"Wed 1\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Thu 2\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Fri 3\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sat 4\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sun 5\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Mon 6\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 7\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]},{\"label\":\"Wed 22 to Tue 28\",\"itinerary\":[{\"date\":\"Wed 22\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Thu 23\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Fri 24\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sat 25\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Sun 26\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Mon 27\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tue 28\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"great-wall\",\"from\":\"Great Wall, China\",\"title\":\"ch 2020\",\"month\":\"July\",\"price\":\"1640\",\"description\":\"The Great Wall of China is the collective name of a series of fortification systems generally built across the historical northern borders of China to protect and consolidate territories of Chinese states and empires against various nomadic groups of the steppe and their polities.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]},{\"city\":\"paris\",\"from\":\"Paris, France\",\"title\":\"pa 2020\",\"month\":\"December\",\"price\":\"1000\",\"description\":\"Paris, France's capital, is a major European city and a global center for art, fashion, gastronomy and culture. Its 19th-century cityscape is crisscrossed by wide boulevards and the River Seine. Beyond such landmarks as the Eiffel Tower and the 12th-century, Gothic Notre-Dame cathedral, the city is known for its cafe culture and designer boutiques along the Rue du Faubourg Saint-Honoré.\",\"itineraries\":[{\"label\":\"Sat 7 to Tues 10\",\"itinerary\":[{\"date\":\"Sat 7\",\"activity\":\"Visit World Trade Center, Financial District, NY Stock...\"},{\"date\":\"Sun 8\",\"activity\":\"We will make our way to the Statue of Liberty. Designed by...\"},{\"date\":\"Mon 9\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"},{\"date\":\"Tues 10\",\"activity\":\"Go and visit some awesome museum at central park and go to Bridge\"}]}]}]");
 
 /***/ }),
 

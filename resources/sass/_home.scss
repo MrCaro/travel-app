@@ -117,18 +117,6 @@
     #explore-heading {
         text-align: center;
     }
-
-    .home-box {
-        button {
-            position: absolute;
-            top: auto;
-            bottom: -10%;
-            right: 0;
-            left: 0;
-            margin: auto;
-            width: auto;
-        }
-    }
 }
 
 @media screen and (max-width: $tablet) {
@@ -138,9 +126,5 @@
 
     #home-banner-text-responsive {
         top: 15vh !important;
-    }
-
-    .home-box {
-        padding: 2rem 1rem !important;
     }
 }

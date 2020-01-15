@@ -2,29 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="700a8689-f799-4495-83ae-9c87a1975e5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/all.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/boarding-pass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/stamp-egypt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/stamp-london.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/stamp-nyc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/stamp-paris.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/mails/confirmationTravel.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/confirmation-page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PagesViewController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PagesViewController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/destinationsView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/destinationsView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/json/destinations-details.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/json/destinations-details.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/_destinations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_destinations.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -199,7 +178,7 @@
       <workItem from="1575401281015" duration="101682000" />
       <workItem from="1577987854321" duration="1371000" />
       <workItem from="1578321546773" duration="55876000" />
-      <workItem from="1579010258141" duration="9315000" />
+      <workItem from="1579010258141" duration="9612000" />
     </task>
     <servers />
   </component>

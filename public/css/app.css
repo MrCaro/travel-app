@@ -121,16 +121,6 @@
   #explore-heading {
     text-align: center;
   }
-
-  .home-box button {
-    position: absolute;
-    top: auto;
-    bottom: -10%;
-    right: 0;
-    left: 0;
-    margin: auto;
-    width: auto;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -140,10 +130,6 @@
 
   #home-banner-text-responsive {
     top: 15vh !important;
-  }
-
-  .home-box {
-    padding: 2rem 1rem !important;
   }
 }
 
@@ -270,16 +256,6 @@
   #explore-heading {
     text-align: center;
   }
-
-  .home-box button {
-    position: absolute;
-    top: auto;
-    bottom: -10%;
-    right: 0;
-    left: 0;
-    margin: auto;
-    width: auto;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -289,10 +265,6 @@
 
   #home-banner-text-responsive {
     top: 15vh !important;
-  }
-
-  .home-box {
-    padding: 2rem 1rem !important;
   }
 }
 
@@ -505,6 +477,22 @@
 
   #map {
     height: 50vh !important;
+  }
+
+  .destinations-box button {
+    position: absolute;
+    top: auto;
+    bottom: -10%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .destinations-box {
+    padding: 2rem 1rem !important;
   }
 }
 

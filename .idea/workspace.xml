@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="700a8689-f799-4495-83ae-9c87a1975e5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/sass/_destinations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_destinations.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_home.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -178,7 +177,7 @@
       <workItem from="1575401281015" duration="101682000" />
       <workItem from="1577987854321" duration="1371000" />
       <workItem from="1578321546773" duration="55876000" />
-      <workItem from="1579010258141" duration="9612000" />
+      <workItem from="1579010258141" duration="9726000" />
     </task>
     <servers />
   </component>

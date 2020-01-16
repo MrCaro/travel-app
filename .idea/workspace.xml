@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="700a8689-f799-4495-83ae-9c87a1975e5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/sass/_home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/_home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/travel-app-favicon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/travel-app-favicon-16x16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/head.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +180,7 @@
       <workItem from="1575401281015" duration="101682000" />
       <workItem from="1577987854321" duration="1371000" />
       <workItem from="1578321546773" duration="55876000" />
-      <workItem from="1579010258141" duration="9726000" />
+      <workItem from="1579010258141" duration="10755000" />
     </task>
     <servers />
   </component>
